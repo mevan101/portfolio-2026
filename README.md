@@ -1,10 +1,10 @@
 # portfolio-2026
 
-Personal site and CV of Shahriar Azad Evan, served at https://msaevan.com via GitHub Pages.
+Personal site and résumé of Shahriar Azad Evan, served at https://msaevan.com via GitHub Pages.
 
-- `index.html`: the whole site. Hand-written HTML and CSS, no framework or build step, a few lines of inline JS for the theme toggle.
-- `fonts/`: self-hosted Inter and Instrument Serif (SIL Open Font License, see `fonts/LICENSE.txt`).
-- `resume.pdf`: two-page A4 CV generated from the page's print stylesheet. Printing the page (Ctrl/Cmd+P) gives the same layout.
-- `portrait.webp` / `portrait.jpg`: profile photo. `og.png`: social sharing image.
+- `index.html`: the portfolio. Hand-written HTML/CSS with a little vanilla JS (theme toggle, count-ups, journey controls). Motion uses native CSS scroll-driven animations where supported and switches off for reduced-motion users; all content is in the HTML without JS.
+- `resume.html`: single-column, ATS-friendly résumé. Printing it produces `resume.pdf` (2 pages, A4).
+- `fonts/inter-var.woff2`: Inter, used where San Francisco isn't available (SIL OFL, see `fonts/LICENSE.txt`).
+- SEO: JSON-LD (ProfilePage + Person), Open Graph/Twitter cards (`og.png`), `sitemap.xml`, `robots.txt`, `404.html`.
 
-To regenerate `resume.pdf` after editing `index.html`, serve the folder over HTTP (fonts don't load from `file://`), then print to PDF in Chrome (A4, default margins) or use Playwright's `page.pdf({ format: 'A4', preferCSSPageSize: true })`.
+Regenerating `resume.pdf`: serve the folder over HTTP (fonts don't load from `file://`), open `resume.html` and print to PDF (A4), or use Playwright's `page.pdf({ format: 'A4', preferCSSPageSize: true })`.
