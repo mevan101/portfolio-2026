@@ -225,7 +225,7 @@ footer .fine{padding-top:16px;display:flex;justify-content:space-between;gap:12p
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 /* ===== Colour & experience layer ===== */
-body{overflow-x:clip}
+html,body{overflow-x:clip}
 :root{--orange:#ff6b00;--pink:#ff2d55;--purple:#a245ff;--violet:#5e5ce6;--blue:#0a84ff;--cyan:#00b4d8;--green:#00b96b;--yellow:#ffb300}
 .gn{position:sticky}
 .prog{position:absolute;left:0;right:0;bottom:-1px;height:2px;pointer-events:none}
@@ -292,7 +292,7 @@ section.journey{margin-top:clamp(88px,12vw,148px);padding:clamp(80px,10vw,128px)
 
 /* contact */
 .contact{position:relative;isolation:isolate}
-.contact .mesh{inset:0 -20%;opacity:.35}
+.contact .mesh{inset:0;opacity:.35}
 .contact h2 .grad{background:linear-gradient(100deg,var(--pink),var(--purple) 45%,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
 
 
@@ -318,7 +318,7 @@ section.journey{margin-top:clamp(88px,12vw,148px);padding:clamp(80px,10vw,128px)
 .more{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .35s cubic-bezier(.2,.7,.2,1)}
 .more:hover{text-decoration:none;background-size:100% 1px}
 /* ===== Motion: purposeful, interruptible, honours reduced motion ===== */
-.hero h1 .mask{display:block;overflow:hidden;padding:0 .06em .12em;margin:0 -.06em -.12em}
+.hero h1 .mask{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
 .hero h1 .hx-line{display:block}
 .hero h1 .grad{background-size:220% 100%;background-position:0% 50%}
 /* spotlight that follows the pointer, tinted per card */
