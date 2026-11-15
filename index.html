@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: https://mlbangladesh.org https://zhqzscggtcjmtjvmmktp.supabase.co https://cedar-initiative.org; font-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0d3b30" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0a2c24" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#efe6d2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141a33" media="(prefers-color-scheme: dark)">
 <title>Shahriar Azad Evan – Community &amp; Program Manager, Dhaka</title>
 <meta name="description" content="Community and program manager in Dhaka. Organizer of Machine Learning Bangladesh and founder of Cedar Initiative. 11 hackathons in five cities in 2026.">
 <meta name="author" content="Shahriar Azad Evan">
@@ -20,7 +20,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/google-sans-flex.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/gloock.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/pixelify.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Shahriar Azad Evan">
 <meta property="og:title" content="Shahriar Azad Evan – Community &amp; Program Manager">
@@ -52,449 +52,396 @@
 </script>
 <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <style>
-@font-face{font-family:"Google Sans Flex";src:url(fonts/google-sans-flex.woff2) format("woff2");font-weight:100 1000;font-stretch:25% 151%;font-display:swap}
-@font-face{font-family:"Gloock";src:url(fonts/gloock.woff2) format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Red Hat Mono";src:url(fonts/redhat-mono.woff2) format("woff2");font-weight:300 700;font-display:swap}
-@font-face{font-family:"Hind Siliguri";src:url(fonts/bangla.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0980-09FF}
+@font-face{font-family:"Google Sans Flex";src:url(fonts/google-sans-flex.woff2) format("woff2");font-weight:100 1000;font-display:swap}
+@font-face{font-family:"Pixelify Sans";src:url(fonts/pixelify.woff2) format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"VT323";src:url(fonts/vt323.woff2) format("woff2");font-weight:400;font-display:swap}
 
-/* Security paper, passport-green cover, stamp inks. */
+/* A late-80s desktop: cream, ink, cobalt, one hot orange, one sticker yellow. */
 :root{
-  --paper:#eaf1ec;--sheet:#f6faf5;--sheet-2:#eef4ef;--ink:#14231e;--ink-2:#3a4b45;--ink-3:#566761;--rule:#c4d3cb;--line:#9fc0b1;
-  --cover:#0d3b30;--cover-2:#0a2f26;--cover-ink:#e9efe9;--cover-mute:#b7c9c0;--gold:#dcc17f;--gold-2:#b8975a;
-  --navy:#1f3c8f;--red:#b01f2a;--green:#13654a;--link:#1f3c8f;
-  --shadow:0 1px 2px rgba(10,40,30,.08),0 18px 40px -18px rgba(10,40,30,.28);
-  --serif:"Gloock","Hind Siliguri",Georgia,serif;--sans:"Google Sans Flex","Hind Siliguri",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--mono:"Red Hat Mono",ui-monospace,Menlo,Consolas,monospace;
-  --w:1200px;--g:clamp(16px,4vw,40px);
-  color-scheme:light;
+  --desk:#efe6d2;--dot:#d9cdb3;--win:#fffaf0;--win-2:#f6efe0;--ink:#16130f;--ink-2:#3d372e;--ink-3:#5f574b;--edge:#16130f;
+  --cobalt:#2643d6;--cobalt-2:#1b32a8;--orange:#ff5a1f;--sun:#ffd23f;--mint:#2fbf8f;--link:#1b32a8;
+  --term:#101820;--term-ink:#b8f5c8;--term-dim:#6fa889;
+  --pix:"Pixelify Sans",ui-monospace,monospace;--sans:"Google Sans Flex",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--vt:"VT323",ui-monospace,Menlo,monospace;
+  --sh:5px 5px 0 var(--edge);--w:1240px;--g:clamp(14px,3.6vw,36px);color-scheme:light;
 }
-:root[data-theme=dark]{
-  --paper:#0c1613;--sheet:#13201b;--sheet-2:#172720;--ink:#e6ede8;--ink-2:#bccac3;--ink-3:#9aaca4;--rule:#2c3f37;--line:#2f5a4a;
-  --cover:#0a2c24;--cover-2:#071f1a;--navy:#9db3ff;--red:#ff8a80;--green:#73d6a8;--link:#a9bdff;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 24px 48px -20px rgba(0,0,0,.6);color-scheme:dark;
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
-  --paper:#0c1613;--sheet:#13201b;--sheet-2:#172720;--ink:#e6ede8;--ink-2:#bccac3;--ink-3:#9aaca4;--rule:#2c3f37;--line:#2f5a4a;
-  --cover:#0a2c24;--cover-2:#071f1a;--navy:#9db3ff;--red:#ff8a80;--green:#73d6a8;--link:#a9bdff;
-  --shadow:0 1px 2px rgba(0,0,0,.4),0 24px 48px -20px rgba(0,0,0,.6);color-scheme:dark}}
+:root[data-theme=dark]{--desk:#141a33;--dot:#232b52;--win:#1d2340;--win-2:#252c4d;--ink:#f3ecdc;--ink-2:#cfc7b6;--ink-3:#a9a291;--edge:#05070f;--cobalt:#5b75ff;--cobalt-2:#3b55e6;--link:#9fb0ff;--sh:5px 5px 0 #05070f;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--desk:#141a33;--dot:#232b52;--win:#1d2340;--win-2:#252c4d;--ink:#f3ecdc;--ink-2:#cfc7b6;--ink-3:#a9a291;--edge:#05070f;--cobalt:#5b75ff;--cobalt-2:#3b55e6;--link:#9fb0ff;--sh:5px 5px 0 #05070f;color-scheme:dark}}
 
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);font-optical-sizing:auto;-webkit-font-smoothing:antialiased;overflow-x:clip}
-/* the paper itself: fine security waves */
-body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='28'%3E%3Cg fill='none' stroke='%239fc0b1' stroke-width='.6'%3E%3Cpath d='M0 7c20-6 60-6 80 0s60 6 80 0'/%3E%3Cpath d='M0 14c20 6 60 6 80 0s60-6 80 0'/%3E%3Cpath d='M0 21c20-6 60-6 80 0s60 6 80 0'/%3E%3C/g%3E%3C/svg%3E") 0 0/160px 28px}
-:root[data-theme=dark] body::before{opacity:.22}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]) body::before{opacity:.22}}
-::selection{background:var(--gold);color:#14231e}
-:focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:4px}
-a{color:var(--link);text-decoration-thickness:1px;text-underline-offset:.22em}
-a:hover{text-decoration-thickness:2px}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip;
+  background:var(--desk) radial-gradient(var(--dot) 1.2px,transparent 1.3px) 0 0/14px 14px}
+::selection{background:var(--sun);color:#16130f}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+a{color:var(--link);text-decoration-thickness:2px;text-underline-offset:.2em}
+a:hover{background:var(--sun);color:#16130f}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-weight:400;margin:0;text-wrap:balance}
-h2{font:400 clamp(2rem,1.3rem + 2.6vw,3.4rem)/1.04 var(--serif);letter-spacing:-.01em}
-h3{font:600 1.3rem/1.25 var(--sans);letter-spacing:-.005em}
-p{margin:0}
-ul{margin:0;padding:0;list-style:none}
+h1,h2,h3,h4{margin:0;font-weight:700;text-wrap:balance}
+p{margin:0}ul,ol{margin:0;padding:0;list-style:none}
 .w{max-width:var(--w);margin:0 auto;padding:0 var(--g)}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--gold);color:#14231e;padding:10px 16px;border-radius:6px;font-weight:600}
-.skip:focus{top:12px}
-[lang=bn]{font-family:"Hind Siliguri",var(--sans);font-weight:500}
-.mono{font-family:var(--mono)}
-::-webkit-scrollbar{width:11px;height:11px}::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px;border:3px solid var(--paper)}::-webkit-scrollbar-track{background:var(--paper)}
+.skip{position:absolute;left:10px;top:-60px;z-index:100;background:var(--sun);color:#16130f;padding:10px 14px;border:2px solid #16130f;font-weight:700}
+.skip:focus{top:10px}
+::-webkit-scrollbar{width:14px;height:14px}::-webkit-scrollbar-track{background:var(--win-2);border-left:2px solid var(--edge)}::-webkit-scrollbar-thumb{background:var(--cobalt);border:2px solid var(--edge)}
 
-/* Cover-green bar */
-.bar{position:sticky;top:0;z-index:50;background:var(--cover);color:var(--cover-ink);border-bottom:1px solid rgba(220,193,127,.28)}
-.bar .w{display:flex;align-items:center;gap:20px;height:64px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--gold);text-decoration:none;font:400 1.2rem/1 var(--serif);white-space:nowrap}
-.brand svg{width:26px;height:26px;flex:none}
-.brand .short{display:none}
-.links{display:flex;gap:2px;margin-left:auto}
-.links a{color:var(--cover-ink);text-decoration:none;font-size:.94rem;padding:10px 12px;border-radius:6px;position:relative}
-.links a::after{content:"";position:absolute;left:12px;right:12px;bottom:6px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
-.links a:hover::after{transform:none}
-.tools{display:flex;align-items:center;gap:6px}
-.ib{width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:8px;background:none;color:var(--cover-ink);cursor:pointer}
-.ib:hover{background:rgba(255,255,255,.08)}
+/* menu bar */
+.menubar{position:sticky;top:0;z-index:60;background:var(--win);border-bottom:2px solid var(--edge);font:500 15px/1 var(--pix)}
+.menubar .w{display:flex;align-items:center;gap:6px;height:48px}
+.logo{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-weight:700;font-size:17px;padding:6px 10px;white-space:nowrap}
+.logo svg{width:22px;height:22px}
+.logo .short{display:none}
+.links{display:flex;gap:0}
+.links a{color:var(--ink);text-decoration:none;padding:16px 11px}
+.links a:hover,.logo:hover{background:var(--cobalt);color:#fff}
+.right{margin-left:auto;display:flex;align-items:center;gap:4px}
+.clock{font-family:var(--vt);font-size:21px;padding:0 10px;color:var(--ink-2);white-space:nowrap}
+.ib{width:44px;height:44px;display:grid;place-items:center;border:0;background:none;color:var(--ink);cursor:pointer}
+.ib:hover{background:var(--cobalt);color:#fff}
 .ib svg{width:20px;height:20px}
 .ib .sun{display:none}
 :root[data-theme=dark] .ib .sun{display:block}:root[data-theme=dark] .ib .moon{display:none}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]) .ib .sun{display:block}:root:not([data-theme=light]) .ib .moon{display:none}}
-.cv{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid var(--gold);border-radius:999px;color:var(--gold);text-decoration:none;font-weight:600;font-size:.94rem;transition:background .2s,color .2s}
-.cv:hover{background:var(--gold);color:var(--cover)}
+.cvbtn{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;background:var(--orange);color:#16130f;border:2px solid var(--edge);box-shadow:3px 3px 0 var(--edge);text-decoration:none;font-weight:700}
+.cvbtn:hover{background:var(--sun);color:#16130f}
+.cvbtn:active{translate:2px 2px;box-shadow:1px 1px 0 var(--edge)}
 #menu{display:none}
-@media (max-width:1000px){
-  #menu{display:grid}
-  .links{position:fixed;inset:64px 0 auto 0;flex-direction:column;background:var(--cover);padding:8px var(--g) 20px;border-bottom:1px solid rgba(220,193,127,.28);display:none}
-  .bar.open .links{display:flex}
-  .links a{padding:14px 4px;font-size:1.05rem;border-bottom:1px solid rgba(255,255,255,.08)}
-  .links a::after{display:none}
-  .tools{margin-left:auto}
+@media (max-width:1180px){
+  #menu{display:grid}.clock{display:none}
+  .links{position:fixed;inset:48px 0 auto 0;flex-direction:column;background:var(--win);border-bottom:2px solid var(--edge);display:none;padding:6px var(--g) 14px}
+  .menubar.open .links{display:flex}
+  .links a{padding:15px 8px;font-size:18px;border-bottom:1px dashed var(--ink-3)}
 }
-@media (max-width:420px){.brand .full{display:none}.brand .short{display:inline}.cv{padding:0 14px}}
-@media (max-width:350px){.bar .w{gap:8px}.brand{font-size:1.02rem}.brand svg{width:22px}.tools{gap:0}.cv{padding:0 12px;font-size:.88rem}}
+@media (max-width:420px){.logo .full{display:none}.logo .short{display:inline}}
+@media (max-width:350px){.logo{padding:6px 4px;font-size:15px}.logo svg{width:18px}.cvbtn{padding:0 9px}.menubar .w{gap:2px}}
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;font:600 1rem/1 var(--sans);text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);transition:transform .15s,background .2s,color .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-1px)}
-.btn:active{transform:translateY(1px) scale(.98)}
-.btn.solid{background:var(--cover);border-color:var(--cover);color:var(--gold);box-shadow:0 10px 24px -12px rgba(13,59,48,.7)}
-.btn.solid:hover{background:var(--cover-2)}
-:root[data-theme=dark] .btn.solid{background:var(--gold);border-color:var(--gold);color:#0d3b30}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .btn.solid{background:var(--gold);border-color:var(--gold);color:#0d3b30}}
+/* windows */
+.win{position:relative;background:var(--win);border:2px solid var(--edge);box-shadow:var(--sh);min-width:0}
+.tb{display:flex;align-items:center;gap:10px;height:32px;padding:0 8px;border-bottom:2px solid var(--edge);background:var(--win-2);font:600 14px/1 var(--pix);color:var(--ink);user-select:none}
+.tb .ttl{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center}
+.tb i{flex:none;width:14px;height:14px;border:2px solid var(--edge);background:var(--win)}
+.tb i.x{background:var(--orange)}
+.tb::before,.tb::after{content:"";flex:1;max-width:none;height:10px;order:0}
+.win.on .tb{background:repeating-linear-gradient(var(--cobalt) 0 2px,var(--cobalt-2) 2px 4px);color:#fff}
+.win.on .tb .ttl{background:var(--cobalt);padding:3px 10px;flex:0 1 auto;max-width:70%;margin:0 auto}
+.tb::before,.tb::after{display:none}
+.wb{padding:clamp(18px,2.6vw,30px)}
+.drag .tb{cursor:grab}.drag.dragging .tb{cursor:grabbing}
+.drag.dragging{z-index:20}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:2px solid var(--edge);background:var(--win);color:var(--ink);box-shadow:4px 4px 0 var(--edge);font:700 16px/1 var(--pix);text-decoration:none;transition:translate .08s,box-shadow .08s,background .15s}
+.btn:hover{background:var(--sun);color:#16130f}
+.btn:active{translate:3px 3px;box-shadow:1px 1px 0 var(--edge)}
+.btn.go{background:var(--cobalt);color:#fff}
+.btn.go:hover{background:var(--orange);color:#16130f}
 .btn svg{width:18px;height:18px}
 
-/* Hero: the data page */
-.hero{padding:clamp(20px,2.6vw,32px) 0 clamp(40px,6vw,72px)}
-.dp{position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:18px;box-shadow:var(--shadow);overflow:hidden;isolation:isolate}
-.dp::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.9;
-  background:
-   radial-gradient(120% 90% at 100% 0%,color-mix(in oklab,var(--green) 9%,transparent),transparent 60%),
-   radial-gradient(90% 80% at 0% 100%,color-mix(in oklab,var(--navy) 8%,transparent),transparent 60%),
-   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='18'%3E%3Cpath d='M0 9c15-7 45-7 60 0s45 7 60 0' fill='none' stroke='%238fb5a5' stroke-opacity='.45' stroke-width='.5'/%3E%3C/svg%3E") 0 0/120px 18px}
-.dp .rose{position:absolute;z-index:-1;right:-170px;bottom:-200px;width:520px;height:520px;color:var(--line);opacity:.9;pointer-events:none}
-.dp-head{display:flex;align-items:baseline;gap:14px;padding:16px clamp(18px,3vw,32px);border-bottom:1px solid var(--rule);font:500 .78rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
-.dp-head [lang=bn]{letter-spacing:0;text-transform:none;font-size:.9rem}
-.dp-head .code{margin-left:auto;color:var(--ink-2)}
-.dp-body{display:grid;grid-template-columns:minmax(0,248px) minmax(0,1fr);gap:clamp(18px,3.4vw,44px);padding:clamp(18px,2.6vw,28px) clamp(18px,3vw,32px)}
-.photo{margin:0;position:relative}
-.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;filter:saturate(.92) contrast(1.02)}
-.photo::after{content:"";position:absolute;inset:0;border-radius:6px;pointer-events:none;
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='14'%3E%3Cpath d='M0 7c11-5 34-5 45 0s34 5 45 0' fill='none' stroke='%23ffffff' stroke-opacity='.22' stroke-width='.6'/%3E%3C/svg%3E") 0 0/90px 14px;mix-blend-mode:soft-light}
-.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 28px;margin:0;align-content:start}
-.f{min-width:0}
-.f.full{grid-column:1/-1}
-.f dt{font:500 .72rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);display:flex;gap:10px;align-items:baseline}
-.f dt [lang=bn]{font-size:.82rem;letter-spacing:0;text-transform:none}
-.f dd{margin:4px 0 0;font-size:1.06rem;line-height:1.35;color:var(--ink)}
-.f dd b{font-weight:600}
-.f dd a{display:inline-block;padding:12px 0;margin:-12px 0}
-.f .num{font:500 1.5rem/1.1 var(--mono);letter-spacing:-.01em}
-h1.name{font:400 clamp(2.4rem,1.2rem + 3.8vw,4.4rem)/.98 var(--serif);letter-spacing:-.02em;margin-top:2px}
-.ghost{position:absolute;right:clamp(18px,3vw,32px);bottom:92px;width:64px;opacity:.16;filter:grayscale(1) contrast(1.4);border-radius:3px;pointer-events:none}
-.mrz{margin:0;padding:14px clamp(18px,3vw,32px) 16px;border-top:1px solid var(--rule);background:var(--sheet-2);font:500 clamp(.62rem,.38rem + 1vw,1.02rem)/1.55 var(--mono);letter-spacing:.16em;color:var(--ink-2);white-space:pre;overflow:hidden}
-.lede{display:grid;grid-template-columns:minmax(0,1.25fr) auto;gap:10px 40px;align-items:end;margin-top:clamp(20px,2.6vw,32px)}
-.lede .statement{font:400 clamp(1.7rem,1.1rem + 1.8vw,2.5rem)/1.12 var(--serif);letter-spacing:-.01em;max-width:22ch}
-.lede .sub{grid-column:1;color:var(--ink-2);max-width:62ch}
-.ctas{display:flex;flex-wrap:wrap;gap:12px}
-.lede .ctas{grid-column:2;grid-row:1/3;align-self:end}
-@media (max-width:900px){
-  .dp-body{grid-template-columns:minmax(0,1fr)}
-  .photo{max-width:230px}
-  .lede{grid-template-columns:minmax(0,1fr)}
-  .lede .ctas{grid-column:1;grid-row:auto}
-  .ghost{display:none}
+/* hero desktop */
+.desk{position:relative;padding:clamp(28px,5vw,64px) 0 clamp(48px,7vw,96px)}
+.desk-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto auto;gap:clamp(18px,2.6vw,32px);align-items:start}
+.w-about{grid-column:1/span 7;grid-row:1/span 2;z-index:2}
+.w-photo{grid-column:8/span 5;grid-row:1;rotate:1.5deg;z-index:3;max-width:440px;justify-self:end}
+.w-term{grid-column:7/span 5;grid-row:2;margin-top:-70px;rotate:-1.2deg;z-index:4}
+.hello{font:600 15px/1.4 var(--pix);color:var(--ink-3);margin-bottom:14px}
+.hello b{background:var(--sun);color:#16130f;padding:2px 8px;border:2px solid var(--edge);font-weight:700}
+h1.name{font:700 clamp(3rem,1.6rem + 5.4vw,6.4rem)/.9 var(--pix);letter-spacing:-.02em}
+h1.name span{display:block}
+h1.name .o{color:var(--cobalt)}
+.role{margin-top:18px;font:600 clamp(1.1rem,.9rem + .7vw,1.45rem)/1.3 var(--sans)}
+.pitch{margin-top:14px;color:var(--ink-2);max-width:56ch}
+.pitch b{color:var(--ink)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.photo{margin:0;position:relative;background:var(--ink)}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:contrast(1.05) saturate(1.05)}
+.photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(rgba(0,0,0,.07) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+.sticker{position:absolute;z-index:5;left:-22px;bottom:22px;rotate:-8deg;background:var(--sun);color:#16130f;border:2px solid var(--edge);box-shadow:3px 3px 0 var(--edge);padding:8px 12px;font:700 14px/1.15 var(--pix);text-align:center}
+.sticker b{display:block;font-size:22px}
+.term{background:var(--term);color:var(--term-ink);font:400 21px/1.25 var(--vt);padding:16px 18px;min-height:220px}
+.term p{white-space:pre-wrap}
+.term .c{color:var(--term-dim)}
+.term .k{color:#ffd23f}
+.cur{display:inline-block;width:.6em;height:1em;background:var(--term-ink);vertical-align:-.12em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.icons{position:absolute;left:var(--g);bottom:6px;display:none}
+@media (max-width:980px){
+  .sticker{left:10px}
+  .w-about,.w-photo,.w-term{grid-column:1/-1;grid-row:auto;rotate:0deg;margin-top:0}
+  .w-photo{max-width:420px}
+  .desk-grid{grid-template-columns:minmax(0,1fr)}
 }
-@media (max-width:1100px){.fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:760px){.mrz{font-size:calc((100vw - 120px)/31);letter-spacing:.1em}}
-@media (max-width:560px){
-  .fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px 18px}
-  .f dd{font-size:.98rem}
-  .f .num{font-size:1.25rem}
-  .dp-head .code{display:none}
-  .ctas .btn{flex:1 1 100%}
-  .photo{max-width:180px}
-}
+@media (min-width:600px) and (max-width:980px){.desk-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.w-about{grid-column:1/-1}.w-photo{grid-column:1}.w-term{grid-column:2;align-self:stretch}.w-term .term{height:calc(100% - 32px)}}
+@media (max-width:560px){.ctas .btn{flex:1 1 100%}.sticker{left:auto;right:10px;bottom:14px}}
 
-/* Stamps */
-.stamp{--c:var(--navy);--r:-6deg;position:absolute;display:grid;justify-items:center;gap:2px;padding:10px 16px;color:var(--c);border:3px double var(--c);border-radius:10px;
-  font:800 .82rem/1.1 var(--sans);font-stretch:62%;letter-spacing:.06em;text-transform:uppercase;text-align:center;rotate:var(--r);pointer-events:none;
-  mix-blend-mode:multiply;
-  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.6 2.05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0/180px 180px;
-          mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.6 2.05'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") 0 0/180px 180px}
-:root[data-theme=dark] .stamp{mix-blend-mode:normal}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .stamp{mix-blend-mode:normal}}
-.stamp b{font-size:2.1em;font-weight:900;letter-spacing:.02em;line-height:1}
-.stamp .rule{width:100%;height:0;border-top:1.5px solid currentColor;margin:3px 0}
-.stamp.red{--c:var(--red)}.stamp.green{--c:var(--green)}
-.stamp.oval{border-radius:50%;padding:18px 26px}
-.stamp.circle{border-radius:50%;width:150px;height:150px;align-content:center;padding:10px}
-.hero .stamp{right:clamp(90px,9vw,140px);bottom:20px;--r:-7deg;font-size:.84rem}
-@media (max-width:900px){.hero .stamp{bottom:auto;top:70px;right:14px;font-size:.74rem}}
-@media (max-width:560px){.hero .stamp{top:150px;right:12px;font-size:.62rem;padding:8px 10px}}
-/* the press: visible by default; JS arms it, then it lands once */
-@media (prefers-reduced-motion:no-preference){
-  .armed .stamp{opacity:0}
-  .armed .pressed .stamp,.armed .stamp.pressed{animation:press .62s cubic-bezier(.18,.9,.24,1) both}
-}
-@keyframes press{
-  0%{opacity:0;scale:1.6;filter:blur(3px)}
-  55%{opacity:1;scale:.95;filter:blur(0)}
-  72%{scale:1.015}
-  100%{opacity:1;scale:1}
-}
+/* marquee of partners */
+.ticker{border-top:2px solid var(--edge);border-bottom:2px solid var(--edge);background:var(--cobalt);color:#fff;overflow:hidden;font:600 18px/1 var(--pix)}
+.ticker .row{display:flex;width:max-content;gap:0;padding:14px 0;animation:tick 38s linear infinite}
+.ticker ul{display:flex;gap:0}
+.ticker li{padding:0 22px;white-space:nowrap;display:flex;align-items:center;gap:22px}
+.ticker li::after{content:"";width:9px;height:9px;background:var(--sun);rotate:45deg}
+.ticker p{padding:0 22px;white-space:nowrap;color:var(--sun)}
+@keyframes tick{to{translate:-50% 0}}
+.ticker:hover .row{animation-play-state:paused}
 
-/* Issuers row */
-.issuers{padding:22px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.issuers .w{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px}
-.issuers p{font:500 .74rem/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-right:8px}
-.issuers ul{display:flex;flex-wrap:wrap;gap:6px 24px}
-.issuers li{font-size:1.04rem;color:var(--ink-2);display:flex;align-items:center;gap:24px}
-.issuers li+li::before{content:"";width:5px;height:5px;border:1px solid var(--gold-2);rotate:45deg;margin-left:-24px;margin-right:0;position:relative;left:-10px}
+/* sections */
+section.s{padding:clamp(64px,8vw,112px) 0}
+.sh{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 40px;margin-bottom:clamp(28px,4vw,48px)}
+.sh h2{font:700 clamp(2.2rem,1.4rem + 3vw,4rem)/1 var(--pix);letter-spacing:-.01em}
+.sh p{color:var(--ink-2);max-width:52ch}
+.folder{display:inline-flex;align-items:center;gap:10px}
+.folder svg{width:44px;height:36px;flex:none}
 
-/* Sections */
-section.s{padding:clamp(72px,9vw,128px) 0}
-.s-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 48px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
-.s-head p{color:var(--ink-2);max-width:56ch}
-@media (max-width:820px){.s-head{grid-template-columns:minmax(0,1fr)}}
+/* programs: windows of different widths */
+.progs{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(20px,2.6vw,32px)}
+.p-wide{grid-column:span 12}.p-7{grid-column:span 7}.p-5{grid-column:span 5}.p-6{grid-column:span 6}
+.p-wide .wb{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:center}
+.shot{margin:0 0 18px;border:2px solid var(--edge);overflow:hidden;background:var(--ink)}
+.p-wide .shot{margin:0}
+.shot img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:scale .4s}
+.win:hover .shot img{scale:1.03}
+.meta{font:500 15px/1.3 var(--pix);color:var(--ink-3);margin-bottom:8px}
+.prog h3{font:700 clamp(1.4rem,1.1rem + 1vw,1.9rem)/1.1 var(--pix);margin-bottom:10px}
+.prog p{color:var(--ink-2)}
+.nums{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
+.nums div{border:2px solid var(--edge);background:var(--win-2);padding:6px 12px;display:grid}
+.nums dd{margin:0;font:400 30px/1 var(--vt);color:var(--ink)}
+.nums dt{font-size:13px;color:var(--ink-3);order:2}
+.lnk{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:14px}
+.lnk a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.band{grid-column:span 12;margin:0}
+.band .shot{margin:0}
+.band .shot img{aspect-ratio:21/8}
+.nophoto .shot{display:none}
+.p-wide.nophoto .wb{grid-template-columns:minmax(0,1fr)}
+@media (max-width:900px){.p-7,.p-5,.p-6{grid-column:span 12}.p-wide .wb{grid-template-columns:minmax(0,1fr)}.band .shot img{aspect-ratio:4/3}}
 
-/* Entries */
-.band{position:relative;margin:0 0 clamp(48px,6vw,80px)}
-.band img{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:14px}
-.band .stamp{right:clamp(16px,4vw,48px);bottom:clamp(16px,4vw,40px);--c:var(--red);--r:7deg}
-@media (max-width:640px){.band img{aspect-ratio:4/3}}
-.entries{display:grid;gap:clamp(56px,7vw,96px)}
-.entry{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px clamp(20px,3vw,40px);align-items:center;position:relative}
-.entry .media{grid-column:1/span 7;position:relative;margin:0}
-.entry .media img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px;transition:scale .5s cubic-bezier(.2,.7,.2,1)}
-.entry .media .clip{overflow:hidden;border-radius:12px}
-.entry .media:hover img{scale:1.03}
-.entry .body{grid-column:8/span 5}
-.entry.flip .media{grid-column:6/span 7;grid-row:1}
-.entry.flip .body{grid-column:1/span 5;grid-row:1}
-.entry .media .stamp,.band .stamp{background:color-mix(in oklab,var(--sheet) 90%,transparent);mix-blend-mode:normal;box-shadow:0 8px 20px -10px rgba(0,0,0,.35)}
-.entry .media .stamp{right:-14px;bottom:-22px}
-.entry.flip .media .stamp{left:-14px;right:auto}
-.meta{font:500 .76rem/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
-.entry h3,.leaf h3{font:400 clamp(1.6rem,1.2rem + 1.2vw,2.2rem)/1.1 var(--serif);letter-spacing:-.01em;margin-bottom:14px}
-.entry p{color:var(--ink-2)}
-.data{display:flex;flex-wrap:wrap;gap:12px 28px;margin:20px 0 0;padding-top:16px;border-top:1px dashed var(--line)}
-.data div{display:grid}
-.data dt{order:2;font-size:.82rem;color:var(--ink-3)}
-.data dd{margin:0;font:500 1.5rem/1.1 var(--mono);color:var(--ink)}
-.go{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:16px}
-.go a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
-/* two Kaggle competitions share one page, no photo: the stamps are the picture */
-.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
-.leaf{position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:14px;padding:clamp(22px,3vw,36px);padding-top:clamp(176px,14vw,186px);overflow:hidden}
-.leaf .stamp{top:22px;right:24px}
-.leaf .stamp.circle{width:132px;height:132px}
-@media (max-width:820px){
-  .entry .media,.entry.flip .media,.entry .body,.entry.flip .body{grid-column:1/-1;grid-row:auto}
-  .entry .media .stamp,.entry.flip .media .stamp{right:10px;left:auto;bottom:-18px}
-  .pair{grid-template-columns:minmax(0,1fr)}
-}
+/* journey: a terminal log */
+.log{background:var(--term);color:var(--term-ink);font:400 22px/1.3 var(--vt);padding:clamp(18px,2.6vw,30px)}
+.log li{display:grid;grid-template-columns:90px minmax(0,1fr);gap:4px 18px;padding:12px 0;border-bottom:1px dashed #2b3b47}
+.log li:last-child{border-bottom:0}
+.log .yr{color:#ffd23f}
+.log h3{font:400 24px/1.2 var(--vt);color:#fff}
+.log .pl{color:var(--term-dim)}
+.log p{font:400 17px/1.55 var(--sans);color:#cfe9d8;max-width:70ch}
+@media (max-width:600px){.log li{grid-template-columns:minmax(0,1fr)}}
 
-.entry.nophoto .body{grid-column:1/-1;max-width:68ch}
+/* experience: list view */
+.list .group+.group{margin-top:28px}
+.lv-h{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) 190px;gap:16px;padding:8px 16px;background:var(--win-2);border-bottom:2px solid var(--edge);font:600 14px/1.2 var(--pix);color:var(--ink-3)}
+.lv-g{font:700 15px/1.2 var(--pix);padding:10px 16px;border-bottom:2px solid var(--edge);background:var(--sun);color:#16130f}
+.job{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) 190px;gap:4px 16px;padding:16px;border-bottom:1px solid color-mix(in oklab,var(--ink) 18%,transparent)}
+.job:nth-child(even){background:color-mix(in oklab,var(--win-2) 60%,transparent)}
+.job h4{font:700 17px/1.3 var(--sans)}
+.job .org{color:var(--ink-2)}
+.job .when{font:400 20px/1.2 var(--vt);color:var(--ink-3)}
+.job ul{grid-column:1/-1;margin-top:6px;display:grid;gap:5px;color:var(--ink-2)}
+.job li{padding-left:20px;position:relative}
+.job li::before{content:"";position:absolute;left:3px;top:.62em;width:7px;height:7px;background:var(--orange);border:1px solid var(--edge)}
+.job .note{grid-column:1/-1;color:var(--ink-3);font-size:15px}
+@media (max-width:760px){.lv-h{display:none}.job{grid-template-columns:minmax(0,1fr)}.job .when{order:-1}}
 
-/* Route */
-.route{position:relative;display:grid;gap:0}
-.stop{display:grid;grid-template-columns:120px 40px minmax(0,1fr);gap:0 18px;padding:0 0 34px}
-.stop .yr{font:500 1.6rem/1 var(--mono);color:var(--ink);padding-top:2px}
-.stop .pin{position:relative;display:flex;justify-content:center}
-.stop .pin::before{content:"";position:absolute;top:0;bottom:-34px;left:50%;border-left:2px dashed var(--line)}
-.stop:last-child .pin::before{display:none}
-.stop .pin i{position:relative;width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);margin-top:6px}
-.stop.now .pin i{background:var(--red);border-color:var(--red);box-shadow:0 0 0 6px color-mix(in oklab,var(--red) 18%,transparent)}
-.stop .place{font:500 .74rem/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
-.stop h3{font:400 1.5rem/1.2 var(--serif);margin:4px 0 6px}
-.stop p{color:var(--ink-2);max-width:62ch}
-@media (max-width:600px){.stop{grid-template-columns:28px minmax(0,1fr);gap:0 14px}.stop .yr{grid-column:2;font-size:1.25rem}.stop .pin{grid-row:1/3;grid-column:1}.stop .txt{grid-column:2}}
+/* recognition */
+.rec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,2.6vw,32px);align-items:start}
+.trophies li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:14px;align-items:center;padding:12px 0;border-bottom:1px dashed color-mix(in oklab,var(--ink) 30%,transparent)}
+.trophies li:last-child{border-bottom:0}
+.badge{width:52px;height:52px;display:grid;place-items:center;border:2px solid var(--edge);background:var(--sun);color:#16130f;font:400 18px/1 var(--vt);text-align:center;box-shadow:2px 2px 0 var(--edge)}
+.trophies li:nth-child(3n+2) .badge{background:var(--orange)}.trophies li:nth-child(3n) .badge{background:var(--mint)}
+.trophies strong{display:block}
+.trophies span{color:var(--ink-2);font-size:15px}
+.inbox li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:14px 0;border-bottom:1px dashed color-mix(in oklab,var(--ink) 30%,transparent)}
+.inbox li:last-child{border-bottom:0}
+.inbox .from{font:600 15px/1.3 var(--pix);color:var(--ink-3)}
+.inbox .dt{font:400 19px/1.2 var(--vt);color:var(--ink-3)}
+.inbox a.t{grid-column:1/-1;font-weight:700;color:var(--ink);text-decoration:none;font-size:17px;line-height:1.35}
+.inbox a.t:hover{text-decoration:underline;background:none;color:var(--link)}
+.inbox p{grid-column:1/-1;color:var(--ink-2);font-size:15px}
+.inbox .also a{font-size:15px}
+@media (max-width:860px){.rec{grid-template-columns:minmax(0,1fr)}}
 
-/* Experience ledger */
-.ledger{display:grid;gap:clamp(40px,5vw,64px)}
-.group h3.gh{font:500 .78rem/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);padding-bottom:12px;border-bottom:2px solid var(--ink)}
-.role{display:grid;grid-template-columns:200px minmax(0,1fr);gap:6px 32px;padding:22px 0;border-bottom:1px solid var(--rule)}
-.role .when{font:500 .86rem/1.5 var(--mono);color:var(--ink-3);padding-top:3px}
-.role h4{margin:0;font:600 1.12rem/1.3 var(--sans)}
-.role .org{color:var(--ink-2)}
-.role ul{margin-top:8px;display:grid;gap:6px;color:var(--ink-2)}
-.role li{padding-left:18px;position:relative}
-.role li::before{content:"";position:absolute;left:2px;top:.68em;width:6px;height:6px;border:1px solid var(--gold-2);rotate:45deg}
-.role .note{margin-top:6px;color:var(--ink-3);font-size:.95rem}
-.compact .role{padding:16px 0}
-@media (max-width:700px){.role{grid-template-columns:minmax(0,1fr)}}
-
-/* Recognition */
-.rec{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
-.awards li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:18px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule)}
-.seal{width:64px;height:64px;border-radius:50%;border:2.5px double var(--c,var(--navy));color:var(--c,var(--navy));display:grid;place-items:center;font:800 .78rem/1.05 var(--sans);font-stretch:62%;text-align:center;letter-spacing:.04em;rotate:-8deg}
-.awards li:nth-child(3n+2) .seal{--c:var(--red);rotate:6deg}.awards li:nth-child(3n) .seal{--c:var(--green);rotate:-3deg}
-.awards strong{display:block;font-weight:600}
-.awards span{color:var(--ink-2);font-size:.95rem}
-.press li{padding:18px 0;border-bottom:1px solid var(--rule)}
-.press .src{font:500 .74rem/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
-.press a.t{display:block;font:400 1.3rem/1.25 var(--serif);color:var(--ink);text-decoration:none;margin:6px 0 4px}
-.press a.t:hover{color:var(--link);text-decoration:underline;text-decoration-thickness:1px}
-.press p{color:var(--ink-2);font-size:.95rem}
-.press .also a{font-size:.95rem}
-.rec h3.gh{font:500 .78rem/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);padding-bottom:12px;border-bottom:2px solid var(--ink)}
-@media (max-width:820px){.rec{grid-template-columns:minmax(0,1fr)}}
-
-/* Background */
-.bg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
-.edu li{padding:18px 0;border-bottom:1px solid var(--rule)}
-.edu strong{display:block;font:400 1.3rem/1.25 var(--serif)}
-.edu .when{font:500 .84rem/1.5 var(--mono);color:var(--ink-3)}
+/* background: properties dialog */
+.props{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,2.6vw,32px);align-items:start}
+.edu li{padding:14px 0;border-bottom:1px dashed color-mix(in oklab,var(--ink) 30%,transparent)}
+.edu li:last-child{border-bottom:0}
+.edu strong{display:block;font:700 19px/1.25 var(--pix)}
+.edu .when{font:400 20px/1.2 var(--vt);color:var(--ink-3)}
 .edu p{color:var(--ink-2)}
-.kit{display:grid;gap:28px;align-content:start}
-.kit h3.gh{font:500 .78rem/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:12px}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tags li{padding:6px 12px;border:1px solid var(--rule);border-radius:999px;font-size:.95rem;color:var(--ink-2);background:var(--sheet)}
-@media (max-width:820px){.bg{grid-template-columns:minmax(0,1fr)}}
+.kit h3{font:700 16px/1.2 var(--pix);margin:0 0 10px}
+.kit div+div{margin-top:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{border:2px solid var(--edge);background:var(--win-2);padding:4px 10px;font-size:15px}
+@media (max-width:860px){.props{grid-template-columns:minmax(0,1fr)}}
 
-/* Contact: the cover */
-.cover{position:relative;overflow:hidden;background:var(--cover);color:var(--cover-ink);padding:clamp(80px,10vw,140px) 0;isolation:isolate}
-.cover .rose{position:absolute;z-index:-1;width:min(720px,90vw);height:min(720px,90vw);right:-12%;top:50%;translate:0 -50%;color:var(--gold);opacity:.32;pointer-events:none}
-.cover h2{color:var(--gold);font-size:clamp(2.6rem,1.4rem + 5vw,6rem);max-width:12ch}
-.cover p{color:var(--cover-mute);max-width:48ch;margin-top:20px;font-size:1.1rem}
-.cover .mail{display:inline-block;margin-top:28px;font:400 clamp(1.4rem,.9rem + 2.2vw,2.6rem)/1.1 var(--serif);color:var(--cover-ink);text-decoration:none;border-bottom:1px solid rgba(220,193,127,.5);overflow-wrap:anywhere}
-.cover .mail:hover{border-bottom-color:var(--gold)}
-.cover .ctas{margin-top:32px}
-.cover .btn{border-color:rgba(233,239,233,.6);color:var(--cover-ink)}
-.cover .btn.solid{background:var(--gold);border-color:var(--gold);color:#0d3b30}
-.social{display:flex;gap:6px;margin-top:28px}
-.social a{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;color:var(--cover-ink);border:1px solid rgba(233,239,233,.25);transition:background .2s,color .2s}
-.social a:hover{background:var(--gold);color:#0d3b30}
+/* contact: compose window */
+.contact{padding:clamp(64px,8vw,112px) 0 clamp(72px,9vw,120px)}
+.compose{max-width:860px;margin:0 auto}
+.compose .tb{background:repeating-linear-gradient(var(--orange) 0 2px,#e44a14 2px 4px);color:#16130f}
+.compose .tb .ttl{background:var(--orange);padding:3px 10px;flex:0 1 auto;margin:0 auto}
+.field{display:grid;grid-template-columns:80px minmax(0,1fr);gap:12px;align-items:center;padding:10px 0;border-bottom:1px dashed color-mix(in oklab,var(--ink) 30%,transparent);font-size:16px}
+.field span{font:600 15px/1 var(--pix);color:var(--ink-3)}
+.field a{font-weight:700}
+.compose h2{font:700 clamp(2.4rem,1.4rem + 4vw,4.6rem)/1 var(--pix);margin:22px 0 14px}
+.compose .msg{color:var(--ink-2);max-width:56ch;font-size:18px}
+.social{display:flex;gap:10px;margin-top:22px}
+.social a{width:46px;height:46px;display:grid;place-items:center;border:2px solid var(--edge);background:var(--win);color:var(--ink);box-shadow:3px 3px 0 var(--edge)}
+.social a:hover{background:var(--sun);color:#16130f}
+.social a:active{translate:2px 2px;box-shadow:1px 1px 0 var(--edge)}
 .social svg{width:19px;height:19px}
-footer{background:var(--cover-2);color:var(--cover-mute);font-size:.92rem;padding:22px 0}
-footer .w{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}
-footer nav{display:flex;gap:4px;margin-left:auto}
-footer a{color:var(--cover-ink);display:inline-flex;align-items:center;min-height:44px;padding:0 10px}
-footer .credit{flex-basis:100%;font-size:.84rem;opacity:.85}
-@media (max-width:640px){footer nav{margin-left:-10px}}
+footer{border-top:2px solid var(--edge);background:var(--win);font:500 15px/1.4 var(--pix);color:var(--ink-2)}
+footer .w{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding-top:10px;padding-bottom:10px}
+footer nav{display:flex;margin-left:auto}
+footer a{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;color:var(--ink)}
+footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media print{.bar,.cover .rose,.dp .rose,body::before,.stamp,.band{display:none!important}.cover{background:none;color:#000}.cover h2{color:#000}}
+@media print{.menubar,.ticker,.photo::after,.sticker{display:none!important}.win{box-shadow:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="bar" id="top">
+<header class="menubar" id="top">
   <div class="w">
-    <a class="brand" href="#main" aria-label="Shahriar Azad Evan, home"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width=".9"><ellipse cx="16" cy="16" rx="14" ry="5"/><ellipse cx="16" cy="16" rx="14" ry="5" transform="rotate(30 16 16)"/><ellipse cx="16" cy="16" rx="14" ry="5" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="14" ry="5" transform="rotate(90 16 16)"/><ellipse cx="16" cy="16" rx="14" ry="5" transform="rotate(120 16 16)"/><ellipse cx="16" cy="16" rx="14" ry="5" transform="rotate(150 16 16)"/></g></svg><span class="full">Shahriar Azad Evan</span><span class="short">S. A. Evan</span></a>
+    <a class="logo" href="#main" aria-label="Shahriar Azad Evan, home"><svg viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="1" width="20" height="20" fill="#2643d6" stroke="currentColor" stroke-width="2"/><rect x="5" y="5" width="5" height="5" fill="#ffd23f"/><rect x="12" y="5" width="5" height="5" fill="#ff5a1f"/><rect x="5" y="12" width="12" height="5" fill="#fffaf0"/></svg><span class="full">Shahriar Azad Evan</span><span class="short">S. A. Evan</span></a>
     <nav class="links" id="links" aria-label="Sections">
       <a href="#work">Programs</a><a href="#journey">Journey</a><a href="#experience">Experience</a><a href="#recognition">Recognition</a><a href="#background">Background</a><a href="#contact">Contact</a>
     </nav>
-    <div class="tools">
-      <button class="ib" id="menu" type="button" aria-expanded="false" aria-controls="links" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
-      <button class="ib" id="theme" type="button" aria-pressed="false" aria-label="Dark theme"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
-      <a class="cv" href="resume.html">Résumé</a>
+    <div class="right">
+      <span class="clock" id="clock" aria-hidden="true">Dhaka --:--</span>
+      <button class="ib" id="menu" type="button" aria-expanded="false" aria-controls="links" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v3H3zM3 15h18v3H3z" fill="currentColor"/></svg></button>
+      <button class="ib" id="theme" type="button" aria-pressed="false" aria-label="Dark theme"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v2h2v2h2v4h-2V9h-2V7h-2V5H9V3Zm-2 2h2v2H7V5ZM5 7h2v4H5V7Zm-2 4h2v4H3v-4Zm2 4h2v2H5v-2Zm2 2h2v2H7v-2Zm2 2h6v2H9v-2Zm6-2h2v2h-2v-2Zm2-2h2v2h-2v-2Zm2-4h2v4h-2v-4Z" fill="currentColor"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 1h2v3h-2zM11 20h2v3h-2zM1 11h3v2H1zM20 11h3v2h-3zM4 4h2v2H4zM18 18h2v2h-2zM18 4h2v2h-2zM4 18h2v2H4zM9 7h6v2h2v6h-2v2H9v-2H7V9h2z" fill="currentColor"/></svg></button>
+      <a class="cvbtn" href="resume.html">Résumé</a>
     </div>
   </div>
 </header>
 
 <main id="main">
-<section class="hero" aria-labelledby="h-name">
-  <div class="w">
-    <article class="dp h-card">
-      <svg class="rose" data-rose="hero" viewBox="0 0 400 400" aria-hidden="true" focusable="false"></svg>
-      <p class="dp-head"><span>Community passport</span><span lang="bn">কমিউনিটি পাসপোর্ট</span><span class="code">BGD · Since 2020</span></p>
-      <div class="dp-body">
-        <figure class="photo"><img class="u-photo" src="hero-portrait-dc.webp" srcset="hero-portrait-dc.webp 480w, hero-portrait-dc@2x.webp 960w" sizes="(max-width:560px) 180px, (max-width:900px) 230px, 300px" width="480" height="600" alt="Shahriar Azad Evan in Washington, D.C., with the Washington Monument and flags behind him" fetchpriority="high"></figure>
-        <dl class="fields">
-          <div class="f full"><dt>Name <span lang="bn">নাম</span></dt><dd><h1 class="name p-name" id="h-name">Shahriar Azad Evan</h1></dd></div>
-          <div class="f full"><dt>Occupation <span lang="bn">পেশা</span></dt><dd class="p-job-title">Community &amp; Program Manager</dd></div>
-          <div class="f"><dt>Organizer <span lang="bn">সংগঠক</span></dt><dd><a class="p-org" href="https://mlbangladesh.org/" target="_blank" rel="noopener">Machine Learning Bangladesh</a></dd></div>
-          <div class="f"><dt>Founder <span lang="bn">প্রতিষ্ঠাতা</span></dt><dd><a href="https://cedar-initiative.org/" target="_blank" rel="noopener">Cedar Initiative</a></dd></div>
-          <div class="f"><dt>Based in <span lang="bn">বর্তমান ঠিকানা</span></dt><dd><span class="p-locality">Dhaka</span>, <span class="p-country-name">Bangladesh</span></dd></div>
-          <div class="f"><dt>Members <span lang="bn">সদস্য</span></dt><dd><span class="num">7,000+</span><br>in ML Bangladesh</dd></div>
-          <div class="f"><dt>Events hosted <span lang="bn">আয়োজিত ইভেন্ট</span></dt><dd><span class="num">42</span><br>since 2020</dd></div>
-          <div class="f"><dt>Home district <span lang="bn">জেলা</span></dt><dd>Pirganj, Rangpur</dd></div>
-        </dl>
+<section class="desk" aria-labelledby="h-name">
+  <div class="w desk-grid">
+    <article class="win on w-about drag h-card">
+      <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">about_me.txt</span><i></i></div>
+      <div class="wb">
+        <p class="hello"><b>Hello!</b> I'm</p>
+        <h1 class="name p-name" id="h-name"><span>Shahriar</span><span class="o">Azad Evan</span></h1>
+        <p class="role"><span class="p-job-title">Community &amp; Program Manager</span> in <span class="p-locality">Dhaka</span>, <span class="p-country-name">Bangladesh</span>.</p>
+        <p class="pitch p-note">I run free tech programs for students across Bangladesh. I organize <b>Machine Learning Bangladesh</b>, a volunteer AI community of <b>7,000+ members</b>, and in 2026 we ran <b>11 hackathons in five cities</b> with MLH, Google for Developers and the Gemma team.</p>
+        <div class="ctas">
+          <a class="btn go u-email" href="mailto:shahriar@sarc.edu.bd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2V5Zm2 2v1h1v1h2v1h2v1h2v1h2v-1h2v-1h2V9h2V8h1V7H4Zm16 3h-1v1h-2v1h-2v1h-2v1h-2v-1H9v-1H7v-1H5v-1H4v7h16v-7Z" fill="currentColor"/></svg>Email me</a>
+          <a class="btn" href="resume.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v10h2v-2h2v2h-2v2h-2v2h-2v-2H9v-2H7v-2h2v2h2V3ZM4 19h16v2H4v-2Z" fill="currentColor"/></svg>Download résumé</a>
+        </div>
       </div>
-      <img class="ghost" src="hero-portrait-dc.webp" alt="" aria-hidden="true" width="480" height="600">
-      <p class="mrz" aria-hidden="true">P&lt;BGDAZAD&lt;EVAN&lt;&lt;MD&lt;SHAHRIAR&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
-MLBD7000&lt;&lt;42EVENTS&lt;&lt;11HACKATHONS2026&lt;&lt;DHAKA&lt;</p>
-      <div class="stamp red" aria-hidden="true"><span>Hackathons · 2026</span><b>11 events</b><span class="rule"></span><span>Five cities · Free entry</span></div>
     </article>
-    <div class="lede">
-      <p class="statement">I run free tech programs for students across Bangladesh.</p>
-      <p class="sub p-note">In 2026 we ran 11 hackathons in five cities, free to attend, with support from MLH, Google for Developers and the Gemma team.</p>
-      <div class="ctas">
-        <a class="btn solid u-email" href="mailto:shahriar@sarc.edu.bd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z M3.5 7l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Email me</a>
-        <a class="btn" href="resume.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Download résumé</a>
+
+    <div class="win w-photo drag">
+      <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">washington_dc.jpg</span><i></i></div>
+      <figure class="photo"><img class="u-photo" src="hero-portrait-dc.webp" srcset="hero-portrait-dc.webp 480w, hero-portrait-dc@2x.webp 960w" sizes="(max-width:600px) 92vw, (max-width:980px) 46vw, 460px" width="480" height="600" alt="Shahriar Azad Evan in Washington, D.C., with the Washington Monument and flags behind him" fetchpriority="high"></figure>
+      <p class="sticker" aria-hidden="true"><b>42</b>events hosted</p>
+    </div>
+
+    <div class="win w-term drag">
+      <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">terminal</span><i></i></div>
+      <div class="term" id="term">
+        <p><span class="c">evan@dhaka:~$</span> stats --since 2020</p>
+        <p><span class="k">community members</span>  7,000+</p>
+        <p><span class="k">events hosted</span>      42</p>
+        <p><span class="k">hackathons 2026</span>    11 in 5 cities</p>
+        <p><span class="k">people reached</span>     4,000+</p>
+        <p><span class="c">evan@dhaka:~$</span> <span class="cur" aria-hidden="true"></span></p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="issuers">
-  <div class="w">
+<div class="ticker" aria-label="Programs delivered with">
+  <div class="row">
     <p>Programs delivered with</p>
-    <ul>
-      <li>Google for Developers</li><li>Google DeepMind (Gemma)</li><li>Kaggle</li><li>Major League Hacking</li><li>HerWILL</li><li>EMK Center</li><li>GDG Dhaka</li>
-    </ul>
+    <ul><li>Google for Developers</li><li>Google DeepMind (Gemma)</li><li>Kaggle</li><li>Major League Hacking</li><li>HerWILL</li><li>EMK Center</li><li>GDG Dhaka</li></ul>
+    <p aria-hidden="true">Programs delivered with</p>
+    <ul aria-hidden="true"><li>Google for Developers</li><li>Google DeepMind (Gemma)</li><li>Kaggle</li><li>Major League Hacking</li><li>HerWILL</li><li>EMK Center</li><li>GDG Dhaka</li></ul>
   </div>
 </div>
 
 <section class="s" id="work" aria-labelledby="h-work">
   <div class="w">
-    <div class="s-head">
-      <h2 id="h-work">Programs, stamped and dated.</h2>
+    <div class="sh">
+      <h2 id="h-work" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#ffd23f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Programs</h2>
       <p>Hackathons, Kaggle competitions and community programs, and what each one produced. Most were run by volunteers and free for every participant.</p>
     </div>
+    <div class="progs">
+      <figure class="win band">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">hacktoberfest_dhaka_oct2026.jpg</span><i></i></div>
+        <div class="shot"><img data-ext src="https://mlbangladesh.org/about/hacktoberfest-dhaka-emk-2026.webp" alt="Group photo of participants and volunteers at Hacktoberfest Hack Day Dhaka, EMK Center, October 2026" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1600" height="610"></div>
+      </figure>
 
-    <figure class="band"><img data-ext src="https://mlbangladesh.org/about/hacktoberfest-dhaka-emk-2026.webp" alt="Group photo of participants and volunteers at Hacktoberfest Hack Day Dhaka, EMK Center, October 2026" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1600" height="686">
-      <div class="stamp oval" aria-hidden="true"><span>Hacktoberfest Hack Day</span><b>Dhaka</b><span>EMK Center · Oct 2026</span></div>
-    </figure>
-
-    <div class="entries">
-      <article class="entry">
-        <figure class="media"><div class="clip"><img data-ext src="https://zhqzscggtcjmtjvmmktp.supabase.co/storage/v1/render/image/public/event-media/65c9249e-0bae-4254-bc53-e82098c13948/f4ac7ea3-04a1-4817-9a67-c2b3039abf6f.webp?width=1024&amp;height=640&amp;resize=cover&amp;quality=86" alt="Participants at Build With Gemma @Bangladesh in the hall at United International University" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1024" height="640"></div>
-          <div class="stamp circle red" aria-hidden="true"><span>Build with Gemma</span><b>JUL</b><span class="rule"></span><span>2026 · UIU</span></div></figure>
-        <div class="body">
-          <p class="meta">Hackathon · July 2026 · Organizer</p>
-          <h3>Build With Gemma @Bangladesh</h3>
-          <p>A hybrid hackathon at United International University, part of Google DeepMind's global Build with Gemma series. Planned in about a week, judged on Kaggle, with a prize pool funded by the Gemma team and hosted with the IEEE Computer Society UIU chapter. Six tracks covered problems like Bangla-language access, rural healthcare and offline study tools.</p>
-          <dl class="data"><div><dt>registered</dt><dd>268</dd></div><div><dt>teams</dt><dd>82</dd></div><div><dt>universities</dt><dd>42</dd></div><div><dt>projects</dt><dd>47</dd></div></dl>
-          <p class="go"><a href="https://mlbangladesh.org/e/bw-gemma" target="_blank" rel="noopener">Event page</a></p>
+      <article class="win prog p-wide">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">build_with_gemma.exe</span><i></i></div>
+        <div class="wb">
+          <div class="shot"><img data-ext src="https://zhqzscggtcjmtjvmmktp.supabase.co/storage/v1/render/image/public/event-media/65c9249e-0bae-4254-bc53-e82098c13948/f4ac7ea3-04a1-4817-9a67-c2b3039abf6f.webp?width=1024&amp;height=640&amp;resize=cover&amp;quality=86" alt="Participants at Build With Gemma @Bangladesh in the hall at United International University" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1024" height="640"></div>
+          <div>
+            <p class="meta">Hackathon · July 2026 · Organizer</p>
+            <h3>Build With Gemma @Bangladesh</h3>
+            <p>A hybrid hackathon at United International University, part of Google DeepMind's global Build with Gemma series. Planned in about a week, judged on Kaggle, with a prize pool funded by the Gemma team and hosted with the IEEE Computer Society UIU chapter. Six tracks covered problems like Bangla-language access, rural healthcare and offline study tools.</p>
+            <dl class="nums"><div><dt>registered</dt><dd>268</dd></div><div><dt>teams</dt><dd>82</dd></div><div><dt>universities</dt><dd>42</dd></div><div><dt>projects</dt><dd>47</dd></div></dl>
+            <p class="lnk"><a href="https://mlbangladesh.org/e/bw-gemma" target="_blank" rel="noopener">Event page</a></p>
+          </div>
         </div>
       </article>
 
-      <article class="entry flip">
-        <figure class="media"><div class="clip"><img data-ext src="https://zhqzscggtcjmtjvmmktp.supabase.co/storage/v1/render/image/public/event-media/65c9249e-0bae-4254-bc53-e82098c13948/7cb1a0e9-b0c8-4bb5-a055-2acb32b48189.webp?width=880&amp;height=660&amp;resize=cover&amp;quality=80" alt="Students building at Build With AI Hack Days at Daffodil International University" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="880" height="660"></div>
-          <div class="stamp" aria-hidden="true"><span>Build With AI Hack Days</span><b>7 venues</b><span class="rule"></span><span>May – Oct 2026</span></div></figure>
-        <div class="body">
+      <article class="win prog p-7">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">build_with_ai_hack_days</span><i></i></div>
+        <div class="wb">
+          <div class="shot"><img data-ext src="https://zhqzscggtcjmtjvmmktp.supabase.co/storage/v1/render/image/public/event-media/65c9249e-0bae-4254-bc53-e82098c13948/7cb1a0e9-b0c8-4bb5-a055-2acb32b48189.webp?width=880&amp;height=660&amp;resize=cover&amp;quality=80" alt="Students building at Build With AI Hack Days at Daffodil International University" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="880" height="660"></div>
           <p class="meta">Hackathon series · May – Oct 2026 · Series lead</p>
           <h3>Build With AI Hack Days</h3>
           <p>ML Bangladesh's first in-person hackathons, backed by MLH and Google for Developers: a free one-day format that takes students from a workshop to a deployed project. It ran at UITS, DIU, Rajshahi University, SEU, RUET, Bangladesh Agricultural University and the EMK Center, followed by Hacktoberfest editions in Dinajpur and Dhaka. I also sat on the judging panel at UITS.</p>
-          <dl class="data"><div><dt>venues</dt><dd>7</dd></div><div><dt>Hacktoberfest editions</dt><dd>2</dd></div></dl>
-          <p class="go"><a href="https://mlbangladesh.org/events" target="_blank" rel="noopener">Event archive</a></p>
+          <dl class="nums"><div><dt>venues</dt><dd>7</dd></div><div><dt>Hacktoberfest editions</dt><dd>2</dd></div></dl>
+          <p class="lnk"><a href="https://mlbangladesh.org/events" target="_blank" rel="noopener">Event archive</a></p>
         </div>
       </article>
 
-      <div class="pair">
-        <article class="leaf">
-          <div class="stamp circle green" aria-hidden="true"><span>Kaggle · ML Olympiad</span><b>353</b><span class="rule"></span><span>Entrants · 2024</span></div>
-          <p class="meta">Kaggle competition · Feb – May 2024 · Co-host</p>
-          <h3>ML Olympiad 2024: CO₂ Emissions Prediction Challenge</h3>
-          <p>A national competition in Google's worldwide ML Olympiad, run with GDG Dhaka, predicting per-capita emissions for 2030. It closed with a two-day finale at UIU and is listed on the Google Developers Blog, with me named as host.</p>
-          <dl class="data"><div><dt>entrants</dt><dd>353</dd></div><div><dt>teams</dt><dd>70</dd></div><div><dt>submissions</dt><dd>1,160</dd></div></dl>
-          <p class="go"><a href="https://www.kaggle.com/competitions/ml-olympiad-co2-emissions-prediction-challenge" target="_blank" rel="noopener">Kaggle</a><a href="https://developers.googleblog.com/en/ml-olympiad-2024-globally-distributed-ml-competitions-by-google-ml-community/" target="_blank" rel="noopener">Google Developers Blog</a></p>
-        </article>
-        <article class="leaf">
-          <div class="stamp circle" aria-hidden="true"><span>Dhaka Breath Index</span><b>PM2.5</b><span class="rule"></span><span>Sep – Oct 2026</span></div>
-          <p class="meta">Kaggle competition · Sep – Oct 2026 · Host</p>
-          <h3>Kaggle Community Olympiad: Dhaka Breath Index</h3>
-          <p>A forecasting competition on PM2.5 air pollution across Bangladeshi cities. Notebook-only rules with documented reasoning screened out unedited AutoML and LLM templates, so the rankings reward real modelling work.</p>
-          <dl class="data"><div><dt>entrants</dt><dd>72</dd></div><div><dt>teams</dt><dd>26</dd></div><div><dt>submissions</dt><dd>333</dd></div></dl>
-          <p class="go"><a href="https://www.kaggle.com/competitions/kaggle-community-olympiad-dhaka-breath-index" target="_blank" rel="noopener">Kaggle</a></p>
-        </article>
-      </div>
-
-      <article class="entry">
-        <figure class="media"><div class="clip"><img data-ext src="https://mlbangladesh.org/media/f6d05ba2-76b6-4bf6-98d2-52a37a856d6c.w1024.webp" alt="Participants at the Tech For Her hackathon at Asian University for Women" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1024" height="683"></div>
-          <div class="stamp oval red" aria-hidden="true"><span>Tech For Her</span><b>Chattogram</b><span>AUW · Sep 2026</span></div></figure>
-        <div class="body">
+      <article class="win prog p-5">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">tech_for_her.exe</span><i></i></div>
+        <div class="wb">
+          <div class="shot"><img data-ext src="https://mlbangladesh.org/media/f6d05ba2-76b6-4bf6-98d2-52a37a856d6c.w1024.webp" alt="Participants at the Tech For Her hackathon at Asian University for Women" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1024" height="683"></div>
           <p class="meta">Hackathon · September 2026 · Co-organizer and judge</p>
           <h3>Tech For Her Hackathon 2026</h3>
           <p>A one-day hackathon for students at Asian University for Women in Chattogram, co-organized by ML Bangladesh and HerWILL. I sat on the judging panel. The winning team, HerFinance, was covered by The Daily Star and The Business Standard.</p>
-          <dl class="data"><div><dt>teams</dt><dd>12</dd></div></dl>
-          <p class="go"><a href="https://www.thedailystar.net/business/news/herfinance-crowned-champion-tech-her-hackathon-2026-4286956" target="_blank" rel="noopener">The Daily Star</a></p>
+          <dl class="nums"><div><dt>teams</dt><dd>12</dd></div></dl>
+          <p class="lnk"><a href="https://www.thedailystar.net/business/news/herfinance-crowned-champion-tech-her-hackathon-2026-4286956" target="_blank" rel="noopener">The Daily Star</a></p>
         </div>
       </article>
 
-      <article class="entry flip">
-        <figure class="media"><div class="clip"><img data-ext src="https://cedar-initiative.org/wp-content/uploads/2026/01/83456127-6a1f-47ca-8f2b-c26802a054c5-768x576.jpg" alt="A student receives a certificate at CS Ed Week 2025, JAAGO Foundation School, Rangpur" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="768" height="576"></div>
-          <div class="stamp green" aria-hidden="true"><span>Cedar Initiative</span><b>4,000+</b><span class="rule"></span><span>People reached</span></div></figure>
-        <div class="body">
-          <p class="meta">Nonprofit · Sep 2025 – present · Founder</p>
-          <h3>Cedar Initiative</h3>
-          <p>A youth-led nonprofit working on the Sustainable Development Goals. Its programs include CS Ed Week 2025 in Rangpur and Ushnota Abhijan 2025, a winter-clothing drive that became an emergency response to the Karail slum fire. ML Bangladesh runs as part of its STEM programs.</p>
-          <dl class="data"><div><dt>people reached</dt><dd>4,000+</dd></div><div><dt>items of clothing donated</dt><dd>1,000</dd></div></dl>
-          <p class="go"><a href="https://cedar-initiative.org/" target="_blank" rel="noopener">cedar-initiative.org</a></p>
+      <article class="win prog p-6">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">ml_olympiad_2024.ipynb</span><i></i></div>
+        <div class="wb">
+          <p class="meta">Kaggle competition · Feb – May 2024 · Co-host</p>
+          <h3>ML Olympiad 2024: CO₂ Emissions Prediction Challenge</h3>
+          <p>A national competition in Google's worldwide ML Olympiad, run with GDG Dhaka, predicting per-capita emissions for 2030. It closed with a two-day finale at UIU and is listed on the Google Developers Blog, with me named as host.</p>
+          <dl class="nums"><div><dt>entrants</dt><dd>353</dd></div><div><dt>teams</dt><dd>70</dd></div><div><dt>submissions</dt><dd>1,160</dd></div></dl>
+          <p class="lnk"><a href="https://www.kaggle.com/competitions/ml-olympiad-co2-emissions-prediction-challenge" target="_blank" rel="noopener">Kaggle</a><a href="https://developers.googleblog.com/en/ml-olympiad-2024-globally-distributed-ml-competitions-by-google-ml-community/" target="_blank" rel="noopener">Google Developers Blog</a></p>
+        </div>
+      </article>
+
+      <article class="win prog p-6">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">dhaka_breath_index.ipynb</span><i></i></div>
+        <div class="wb">
+          <p class="meta">Kaggle competition · Sep – Oct 2026 · Host</p>
+          <h3>Kaggle Community Olympiad: Dhaka Breath Index</h3>
+          <p>A forecasting competition on PM2.5 air pollution across Bangladeshi cities. Notebook-only rules with documented reasoning screened out unedited AutoML and LLM templates, so the rankings reward real modelling work.</p>
+          <dl class="nums"><div><dt>entrants</dt><dd>72</dd></div><div><dt>teams</dt><dd>26</dd></div><div><dt>submissions</dt><dd>333</dd></div></dl>
+          <p class="lnk"><a href="https://www.kaggle.com/competitions/kaggle-community-olympiad-dhaka-breath-index" target="_blank" rel="noopener">Kaggle</a></p>
+        </div>
+      </article>
+
+      <article class="win prog p-wide">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">cedar_initiative</span><i></i></div>
+        <div class="wb">
+          <div class="shot"><img data-ext src="https://cedar-initiative.org/wp-content/uploads/2026/01/83456127-6a1f-47ca-8f2b-c26802a054c5-768x576.jpg" alt="A student receives a certificate at CS Ed Week 2025, JAAGO Foundation School, Rangpur" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="768" height="576"></div>
+          <div>
+            <p class="meta">Nonprofit · Sep 2025 – present · Founder</p>
+            <h3>Cedar Initiative</h3>
+            <p>A youth-led nonprofit working on the Sustainable Development Goals. Its programs include CS Ed Week 2025 in Rangpur and Ushnota Abhijan 2025, a winter-clothing drive that became an emergency response to the Karail slum fire. ML Bangladesh runs as part of its STEM programs.</p>
+            <dl class="nums"><div><dt>people reached</dt><dd>4,000+</dd></div><div><dt>items of clothing donated</dt><dd>1,000</dd></div></dl>
+            <p class="lnk"><a href="https://cedar-initiative.org/" target="_blank" rel="noopener">cedar-initiative.org</a></p>
+          </div>
         </div>
       </article>
     </div>
@@ -503,65 +450,67 @@ MLBD7000&lt;&lt;42EVENTS&lt;&lt;11HACKATHONS2026&lt;&lt;DHAKA&lt;</p>
 
 <section class="s" id="journey" aria-labelledby="h-journey">
   <div class="w">
-    <div class="s-head">
-      <h2 id="h-journey">From Pirganj to national programs.</h2>
-      <p>Six years, one route: Rangpur to Dhaka, a year in Iowa, and back home to run programs across the country.</p>
+    <div class="sh">
+      <h2 id="h-journey" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#2fbf8f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Journey</h2>
+      <p>Six years, from Pirganj in Rangpur to national programs.</p>
     </div>
-    <ol class="route">
-      <li class="stop"><p class="yr">2020</p><span class="pin" aria-hidden="true"><i></i></span><div class="txt"><p class="place">Pirganj, Rangpur</p><h3>It starts with Crowdsource.</h3><p>Became a Google Crowdsource Influencer, hosting training events and bringing new contributors in.</p></div></li>
-      <li class="stop"><p class="yr">2021</p><span class="pin" aria-hidden="true"><i></i></span><div class="txt"><p class="place">Rangpur</p><h3>Campus and code.</h3><p>Led the AngelHack Campus Hub at my college, taught programming online with Codecademy Chapters, and was named a Crowdsource Community Champion.</p></div></li>
-      <li class="stop"><p class="yr">2022</p><span class="pin" aria-hidden="true"><i></i></span><div class="txt"><p class="place">Dhaka</p><h3>Into developer communities.</h3><p>Joined Google Developer Group Dhaka as an Ambassador and started facilitating #IAmRemarkable workshops.</p></div></li>
-      <li class="stop"><p class="yr">2023</p><span class="pin" aria-hidden="true"><i></i></span><div class="txt"><p class="place">Dhaka · North Bengal</p><h3>A community of our own.</h3><p>Started TFUG North Bengal, today ML Bangladesh. Founded UniDevs, began computer science at UIU and became GDG Dhaka's Communications Lead.</p></div></li>
-      <li class="stop"><p class="yr">2024</p><span class="pin" aria-hidden="true"><i></i></span><div class="txt"><p class="place">Dhaka → Cedar Rapids, Iowa</p><h3>The national stage.</h3><p>ML Olympiad drew 353 entrants. The community became ML Bangladesh, and a CCI scholarship took me to Iowa.</p></div></li>
-      <li class="stop"><p class="yr">2025</p><span class="pin" aria-hidden="true"><i></i></span><div class="txt"><p class="place">Cedar Rapids → Dhaka</p><h3>Iowa, and back.</h3><p>The Platinum Eagle Leadership Award and Dean's List at Kirkwood. Home again, I founded Cedar Initiative and placed 3rd in the CICA AI Art Competition.</p></div></li>
-      <li class="stop now"><p class="yr">2026</p><span class="pin" aria-hidden="true"><i></i></span><div class="txt"><p class="place">Five cities · Moscow</p><h3>Eleven hackathons, five cities.</h3><p>Seven Build With AI Hack Days, two Hacktoberfest editions, Build With Gemma and Tech For Her, plus a second Kaggle competition on Dhaka's air. In October, part of Bangladesh's 19-member delegation to the Global Digital Forum in Moscow.</p></div></li>
-    </ol>
+    <div class="win on">
+      <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">history.log</span><i></i></div>
+      <ol class="log">
+        <li><span class="yr">2020</span><div><h3>It starts with Crowdsource.</h3><p class="pl">Pirganj, Rangpur</p><p>Became a Google Crowdsource Influencer, hosting training events and bringing new contributors in.</p></div></li>
+        <li><span class="yr">2021</span><div><h3>Campus and code.</h3><p class="pl">Rangpur</p><p>Led the AngelHack Campus Hub at my college, taught programming online with Codecademy Chapters, and was named a Crowdsource Community Champion.</p></div></li>
+        <li><span class="yr">2022</span><div><h3>Into developer communities.</h3><p class="pl">Dhaka</p><p>Joined Google Developer Group Dhaka as an Ambassador and started facilitating #IAmRemarkable workshops.</p></div></li>
+        <li><span class="yr">2023</span><div><h3>A community of our own.</h3><p class="pl">Dhaka · North Bengal</p><p>Started TFUG North Bengal, today ML Bangladesh. Founded UniDevs, began computer science at UIU and became GDG Dhaka's Communications Lead.</p></div></li>
+        <li><span class="yr">2024</span><div><h3>The national stage.</h3><p class="pl">Dhaka → Cedar Rapids, Iowa</p><p>ML Olympiad drew 353 entrants. The community became ML Bangladesh, and a CCI scholarship took me to Iowa.</p></div></li>
+        <li><span class="yr">2025</span><div><h3>Iowa, and back.</h3><p class="pl">Cedar Rapids → Dhaka</p><p>The Platinum Eagle Leadership Award and Dean's List at Kirkwood. Home again, I founded Cedar Initiative and placed 3rd in the CICA AI Art Competition.</p></div></li>
+        <li><span class="yr">2026</span><div><h3>Eleven hackathons, five cities.</h3><p class="pl">Five cities · Moscow</p><p>Seven Build With AI Hack Days, two Hacktoberfest editions, Build With Gemma and Tech For Her, plus a second Kaggle competition on Dhaka's air. In October, part of Bangladesh's 19-member delegation to the Global Digital Forum in Moscow.</p></div></li>
+      </ol>
+    </div>
   </div>
 </section>
 
 <section class="s" id="experience" aria-labelledby="h-exp">
   <div class="w">
-    <div class="s-head">
-      <h2 id="h-exp">Experience</h2>
+    <div class="sh">
+      <h2 id="h-exp" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#ff5a1f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Experience</h2>
       <p>Six years of community leadership, alongside roles in startups, nonprofits and economic development.</p>
     </div>
-    <div class="ledger">
-      <div class="group">
-        <h3 class="gh">Community leadership</h3>
-        <div class="role"><p class="when">Sep 2023 – Present<br>Dhaka</p><div><h4>Organizer</h4><p class="org">Machine Learning Bangladesh</p><ul>
+    <div class="win list">
+      <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">experience — 15 items</span><i></i></div>
+      <div class="lv-h" aria-hidden="true"><span>Role</span><span>Organization</span><span>Dates</span></div>
+      <div class="group"><h3 class="lv-g">Community leadership</h3>
+        <div class="job"><h4>Organizer</h4><p class="org">Machine Learning Bangladesh</p><p class="when">Sep 2023 – Present · Dhaka</p><ul>
           <li>Grew TensorFlow User Group North Bengal into Machine Learning Bangladesh, a national AI community of 7,000+ members in the Google AI Community Network.</li>
           <li>Ran 11 free hackathons in 2026 across 10 venues in five cities with MLH, Google for Developers and HerWILL; judged at UITS and Tech For Her.</li>
-          <li>Hosted two national Kaggle competitions: ML Olympiad 2024 (353 entrants) and Dhaka Breath Index 2026 (72 entrants).</li></ul></div></div>
-        <div class="role"><p class="when">Sep 2025 – Present<br>Bangladesh</p><div><h4>Founder, Head of Programs &amp; Partnerships</h4><p class="org">Cedar Initiative</p><ul>
+          <li>Hosted two national Kaggle competitions: ML Olympiad 2024 (353 entrants) and Dhaka Breath Index 2026 (72 entrants).</li></ul></div>
+        <div class="job"><h4>Founder, Head of Programs &amp; Partnerships</h4><p class="org">Cedar Initiative</p><p class="when">Sep 2025 – Present · Bangladesh</p><ul>
           <li>Founded a youth-led nonprofit for climate action, education and civic engagement that has reached 4,000+ people.</li>
-          <li>Leads programs and partnerships, and publishes an annual finance report.</li></ul></div></div>
-        <div class="role"><p class="when">Aug 2023 – May 2026</p><div><h4>Communications Lead</h4><p class="org">Google Developer Group Dhaka</p><ul>
-          <li>Ran outreach, event promotion and social media for nearly three years, including DevFest events sponsored by GitHub, JetBrains and Sticker Mule.</li></ul><p class="note">Previously Ambassador, Nov 2022 – Aug 2023.</p></div></div>
-        <div class="role"><p class="when">Current</p><div><h4>Director, CMX Connect Dhaka</h4><p class="org">CMX</p><ul>
-          <li>Runs the Dhaka chapter of CMX's network for community professionals: meetups, knowledge sharing and career development.</li></ul></div></div>
-        <div class="role"><p class="when">Dec 2023 – Present</p><div><h4>Founder, now Advisor</h4><p class="org">UniDevs</p><ul>
-          <li>Built a student developer community bringing computer science to rural and semi-urban Bangladesh. Handed leadership to the student team in August 2026.</li></ul></div></div>
-        <div class="role"><p class="when">Jul 2020 – Dec 2024</p><div><h4>Influencer &amp; Community Champion</h4><p class="org">Google Crowdsource</p><ul>
-          <li>Hosted contribution and training events and onboarded new contributors. Reached contributor level 18.</li></ul></div></div>
+          <li>Leads programs and partnerships, and publishes an annual finance report.</li></ul></div>
+        <div class="job"><h4>Communications Lead</h4><p class="org">Google Developer Group Dhaka</p><p class="when">Aug 2023 – May 2026</p><ul>
+          <li>Ran outreach, event promotion and social media for nearly three years, including DevFest events sponsored by GitHub, JetBrains and Sticker Mule.</li></ul><p class="note">Previously Ambassador, Nov 2022 – Aug 2023.</p></div>
+        <div class="job"><h4>Director, CMX Connect Dhaka</h4><p class="org">CMX</p><p class="when">Current</p><ul>
+          <li>Runs the Dhaka chapter of CMX's network for community professionals: meetups, knowledge sharing and career development.</li></ul></div>
+        <div class="job"><h4>Founder, now Advisor</h4><p class="org">UniDevs</p><p class="when">Dec 2023 – Present</p><ul>
+          <li>Built a student developer community bringing computer science to rural and semi-urban Bangladesh. Handed leadership to the student team in August 2026.</li></ul></div>
+        <div class="job"><h4>Influencer &amp; Community Champion</h4><p class="org">Google Crowdsource</p><p class="when">Jul 2020 – Dec 2024</p><ul>
+          <li>Hosted contribution and training events and onboarded new contributors. Reached contributor level 18.</li></ul></div>
       </div>
-      <div class="group">
-        <h3 class="gh">Employment</h3>
-        <div class="role"><p class="when">Jan 2026 – Jun 2026</p><div><h4>Junior Program Manager</h4><p class="org">Early-stage startup (stealth)</p></div></div>
-        <div class="role"><p class="when">Sep 2025 – Nov 2025<br>Remote</p><div><h4>Community Manager, Growth</h4><p class="org">Elevate Pay (YC W22)</p><ul>
+      <div class="group"><h3 class="lv-g">Employment</h3>
+        <div class="job"><h4>Junior Program Manager</h4><p class="org">Early-stage startup (stealth)</p><p class="when">Jan 2026 – Jun 2026</p></div>
+        <div class="job"><h4>Community Manager, Growth</h4><p class="org">Elevate Pay (YC W22)</p><p class="when">Sep 2025 – Nov 2025 · Remote</p><ul>
           <li>Handled onboarding and account-verification cases for a YC-backed fintech.</li>
-          <li>Researched markets and partners, and sourced vendors for business-development events.</li></ul></div></div>
-        <div class="role"><p class="when">Feb 2025 – May 2025<br>Cedar Rapids, Iowa</p><div><h4>Marketing Intern (Volunteer)</h4><p class="org">American Red Cross</p><ul>
-          <li>Built a local-business campaign to recruit volunteers and reported weekly on social performance.</li></ul></div></div>
-        <div class="role"><p class="when">Dec 2024 – Apr 2025<br>Iowa</p><div><h4>Intern, Programs and Events</h4><p class="org">Cedar Rapids Metro Economic Alliance</p><ul>
-          <li>Helped prepare the Downtown Farmers Market and Market After Dark season: vendor approvals, deposits, scheduling and materials.</li></ul></div></div>
+          <li>Researched markets and partners, and sourced vendors for business-development events.</li></ul></div>
+        <div class="job"><h4>Marketing Intern (Volunteer)</h4><p class="org">American Red Cross</p><p class="when">Feb 2025 – May 2025 · Cedar Rapids, Iowa</p><ul>
+          <li>Built a local-business campaign to recruit volunteers and reported weekly on social performance.</li></ul></div>
+        <div class="job"><h4>Intern, Programs and Events</h4><p class="org">Cedar Rapids Metro Economic Alliance</p><p class="when">Dec 2024 – Apr 2025 · Iowa</p><ul>
+          <li>Helped prepare the Downtown Farmers Market and Market After Dark season: vendor approvals, deposits, scheduling and materials.</li></ul></div>
       </div>
-      <div class="group compact">
-        <h3 class="gh">Earlier and volunteer</h3>
-        <div class="role"><p class="when">Aug 2021 – Nov 2022</p><div><h4>Student Ambassador, AngelHack</h4><p class="org">Led the AngelHack Campus Hub at Government Shah Abdur Rouf College.</p></div></div>
-        <div class="role"><p class="when">Nov 2021 – Nov 2022</p><div><h4>Chapter Community Manager, Codecademy</h4><p class="org">Ran online programming workshops for students in rural Rangpur.</p></div></div>
-        <div class="role"><p class="when">2022 – Apr 2026</p><div><h4>Facilitator, #IAmRemarkable</h4><p class="org">Self-advocacy workshops, online and in Dhaka.</p></div></div>
-        <div class="role"><p class="when">2024 – 2025</p><div><h4>Co-Chair, Sustainability Club</h4><p class="org">Kirkwood Community College: campus campaigns and the Earth Week Scavenger Hunt.</p></div></div>
-        <div class="role"><p class="when">U.S. Department of State</p><div><h4>Global Sustainability Solutions Challenge</h4><p class="org">Virtual exchange. Designed a smart waste-management concept with teammates from the US and Iraq.</p></div></div>
+      <div class="group"><h3 class="lv-g">Earlier and volunteer</h3>
+        <div class="job"><h4>Student Ambassador, AngelHack</h4><p class="org">Led the AngelHack Campus Hub at Government Shah Abdur Rouf College.</p><p class="when">Aug 2021 – Nov 2022</p></div>
+        <div class="job"><h4>Chapter Community Manager, Codecademy</h4><p class="org">Ran online programming workshops for students in rural Rangpur.</p><p class="when">Nov 2021 – Nov 2022</p></div>
+        <div class="job"><h4>Facilitator, #IAmRemarkable</h4><p class="org">Self-advocacy workshops, online and in Dhaka.</p><p class="when">2022 – Apr 2026</p></div>
+        <div class="job"><h4>Co-Chair, Sustainability Club</h4><p class="org">Kirkwood Community College: campus campaigns and the Earth Week Scavenger Hunt.</p><p class="when">2024 – 2025</p></div>
+        <div class="job"><h4>Global Sustainability Solutions Challenge</h4><p class="org">Virtual exchange. Designed a smart waste-management concept with teammates from the US and Iraq.</p><p class="when">U.S. Department of State</p></div>
       </div>
     </div>
   </div>
@@ -569,30 +518,36 @@ MLBD7000&lt;&lt;42EVENTS&lt;&lt;11HACKATHONS2026&lt;&lt;DHAKA&lt;</p>
 
 <section class="s" id="recognition" aria-labelledby="h-rec">
   <div class="w">
-    <div class="s-head">
-      <h2 id="h-rec">Recognition</h2>
+    <div class="sh">
+      <h2 id="h-rec" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#ffd23f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Recognition</h2>
       <p>Scholarships, leadership honours and coverage of the programs I've run.</p>
     </div>
     <div class="rec">
-      <div>
-        <h3 class="gh">Awards and scholarships</h3>
-        <ul class="awards">
-          <li><span class="seal" aria-hidden="true">2024<br>–25</span><div><strong>Community College Initiative Scholar</strong><span>U.S. Department of State full scholarship, nominated by the U.S. Embassy Dhaka. <span class="sr">2024 – 25.</span></span></div></li>
-          <li><span class="seal" aria-hidden="true">2025</span><div><strong>Platinum Eagle Leadership Award</strong><span>Highest tier of Kirkwood Community College's Eagle Leadership Program. <span class="sr">2025.</span></span></div></li>
-          <li><span class="seal" aria-hidden="true">2025</span><div><strong>3rd Place, CICA AI Art Competition</strong><span>CICA and Azerbaijan's Ministry of Youth and Sports. 260+ entries from across Asia. <span class="sr">2025.</span></span></div></li>
-          <li><span class="seal" aria-hidden="true">2025</span><div><strong>Dean's List</strong><span>Kirkwood Community College. <span class="sr">2025.</span></span></div></li>
-          <li><span class="seal" aria-hidden="true">2021</span><div><strong>Community Champion</strong><span>Google Crowdsource, nominated by community members. <span class="sr">2021.</span></span></div></li>
-          <li><span class="seal" aria-hidden="true">Star</span><div><strong>Star Fellow</strong><span>Awareness360. Recognised for youth awareness work.</span></div></li>
-        </ul>
+      <div class="win">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">trophy_case</span><i></i></div>
+        <div class="wb">
+          <h3 class="sr">Awards and scholarships</h3>
+          <ul class="trophies">
+            <li><span class="badge" aria-hidden="true">24<br>25</span><div><strong>Community College Initiative Scholar</strong><span>U.S. Department of State full scholarship, nominated by the U.S. Embassy Dhaka. 2024 – 25.</span></div></li>
+            <li><span class="badge" aria-hidden="true">2025</span><div><strong>Platinum Eagle Leadership Award</strong><span>Highest tier of Kirkwood Community College's Eagle Leadership Program. 2025.</span></div></li>
+            <li><span class="badge" aria-hidden="true">3rd</span><div><strong>3rd Place, CICA AI Art Competition</strong><span>CICA and Azerbaijan's Ministry of Youth and Sports. 260+ entries from across Asia. 2025.</span></div></li>
+            <li><span class="badge" aria-hidden="true">2025</span><div><strong>Dean's List</strong><span>Kirkwood Community College. 2025.</span></div></li>
+            <li><span class="badge" aria-hidden="true">2021</span><div><strong>Community Champion</strong><span>Google Crowdsource, nominated by community members. 2021.</span></div></li>
+            <li><span class="badge" aria-hidden="true">★</span><div><strong>Star Fellow</strong><span>Awareness360. Recognised for youth awareness work.</span></div></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h3 class="gh">In the press</h3>
-        <ul class="press">
-          <li><p class="src">Dhaka Tribune · Oct 2026</p><a class="t" href="https://www.dhakatribune.com/bangladesh/foreign-affairs/422008/a-new-chapter-in-bangladesh%E2%80%93russia-digital" target="_blank" rel="noopener">Bangladesh delegation joins global digital forum in Russia</a><p>Names me in the 19-member Bangladeshi delegation to the second Global Digital Forum in Moscow.</p></li>
-          <li><p class="src">The Business Standard · Nov 2025</p><a class="t" href="https://www.tbsnews.net/bangladesh/bangladeshi-youth-wins-top-spot-cica-artificial-intelligence-art-competition-1284891" target="_blank" rel="noopener">Bangladeshi youth wins top spot in CICA Artificial Intelligence Art Competition</a></li>
-          <li><p class="src">The Daily Star, The Business Standard · Sep 2026</p><a class="t" href="https://www.thedailystar.net/business/news/herfinance-crowned-champion-tech-her-hackathon-2026-4286956" target="_blank" rel="noopener">HerFinance crowned champion at Tech for Her Hackathon 2026</a><p class="also">Also in <a href="https://www.tbsnews.net/economy/corporates/herfinance-crowned-champion-herwills-tech-her-hackathon-2026-1558386" target="_blank" rel="noopener">The Business Standard</a>.</p></li>
-          <li><p class="src">Google Developers Blog · 2024</p><a class="t" href="https://developers.googleblog.com/en/ml-olympiad-2024-globally-distributed-ml-competitions-by-google-ml-community/" target="_blank" rel="noopener">ML Olympiad 2024: globally distributed ML competitions by the Google ML community</a><p>Lists the CO₂ Emissions Prediction Challenge and its hosts.</p></li>
-        </ul>
+      <div class="win">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">inbox — press</span><i></i></div>
+        <div class="wb">
+          <h3 class="sr">In the press</h3>
+          <ul class="inbox">
+            <li><span class="from">Dhaka Tribune</span><span class="dt">Oct 2026</span><a class="t" href="https://www.dhakatribune.com/bangladesh/foreign-affairs/422008/a-new-chapter-in-bangladesh%E2%80%93russia-digital" target="_blank" rel="noopener">Bangladesh delegation joins global digital forum in Russia</a><p>Names me in the 19-member Bangladeshi delegation to the second Global Digital Forum in Moscow.</p></li>
+            <li><span class="from">The Business Standard</span><span class="dt">Nov 2025</span><a class="t" href="https://www.tbsnews.net/bangladesh/bangladeshi-youth-wins-top-spot-cica-artificial-intelligence-art-competition-1284891" target="_blank" rel="noopener">Bangladeshi youth wins top spot in CICA Artificial Intelligence Art Competition</a></li>
+            <li><span class="from">The Daily Star, The Business Standard</span><span class="dt">Sep 2026</span><a class="t" href="https://www.thedailystar.net/business/news/herfinance-crowned-champion-tech-her-hackathon-2026-4286956" target="_blank" rel="noopener">HerFinance crowned champion at Tech for Her Hackathon 2026</a><p class="also">Also in <a href="https://www.tbsnews.net/economy/corporates/herfinance-crowned-champion-herwills-tech-her-hackathon-2026-1558386" target="_blank" rel="noopener">The Business Standard</a>.</p></li>
+            <li><span class="from">Google Developers Blog</span><span class="dt">2024</span><a class="t" href="https://developers.googleblog.com/en/ml-olympiad-2024-globally-distributed-ml-competitions-by-google-ml-community/" target="_blank" rel="noopener">ML Olympiad 2024: globally distributed ML competitions by the Google ML community</a><p>Lists the CO₂ Emissions Prediction Challenge and its hosts.</p></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -600,40 +555,51 @@ MLBD7000&lt;&lt;42EVENTS&lt;&lt;11HACKATHONS2026&lt;&lt;DHAKA&lt;</p>
 
 <section class="s" id="background" aria-labelledby="h-bg">
   <div class="w">
-    <div class="s-head">
-      <h2 id="h-bg">Background</h2>
+    <div class="sh">
+      <h2 id="h-bg" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#2fbf8f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Background</h2>
       <p>Computer science in Dhaka, project management in Iowa.</p>
     </div>
-    <div class="bg">
-      <div>
-        <h3 class="sr">Education</h3>
-        <ul class="edu">
-          <li><strong>United International University</strong><p class="when">2023 – 2029 (expected)</p><p>B.Sc. in Computer Science &amp; Engineering, Dhaka</p></li>
-          <li><strong>Kirkwood Community College</strong><p class="when">Aug 2024 – May 2025</p><p>Certificate in Project Management, Cedar Rapids, Iowa. Community College Initiative scholar. Dean's List, GPA above 3.33, 75.5 hours of community service.</p></li>
-          <li><strong>Government Shah Abdur Rouf College</strong><p class="when">2019 – 2022</p><p>Higher Secondary Certificate, Science, Rangpur</p></li>
-        </ul>
+    <div class="props">
+      <div class="win">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">education</span><i></i></div>
+        <div class="wb">
+          <h3 class="sr">Education</h3>
+          <ul class="edu">
+            <li><strong>United International University</strong><p class="when">2023 – 2029 (expected)</p><p>B.Sc. in Computer Science &amp; Engineering, Dhaka</p></li>
+            <li><strong>Kirkwood Community College</strong><p class="when">Aug 2024 – May 2025</p><p>Certificate in Project Management, Cedar Rapids, Iowa. Community College Initiative scholar. Dean's List, GPA above 3.33, 75.5 hours of community service.</p></li>
+            <li><strong>Government Shah Abdur Rouf College</strong><p class="when">2019 – 2022</p><p>Higher Secondary Certificate, Science, Rangpur</p></li>
+          </ul>
+        </div>
       </div>
-      <div class="kit">
-        <div><h3 class="gh">Expertise</h3><ul class="tags"><li>Community management</li><li>Program management</li><li>Event management</li><li>Hackathon design</li><li>Kaggle competitions</li><li>Developer relations</li><li>Partnerships and sponsorships</li><li>Volunteer management</li><li>Digital campaigns</li></ul></div>
-        <div><h3 class="gh">Tools</h3><ul class="tags"><li>Kaggle</li><li>Devpost</li><li>Bevy</li><li>Luma</li><li>Meetup</li><li>Discord</li><li>Slack</li><li>Notion</li><li>Airtable</li><li>Eventbrite</li><li>Microsoft Project</li><li>Google Workspace</li><li>Canva</li><li>Agile and Scrum</li></ul></div>
-        <div><h3 class="gh">Languages</h3><p>Bengali (native) · English (fluent) · Hindi (conversational)</p></div>
+      <div class="win">
+        <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">skills.cfg</span><i></i></div>
+        <div class="wb kit">
+          <div><h3>Expertise</h3><ul class="chips"><li>Community management</li><li>Program management</li><li>Event management</li><li>Hackathon design</li><li>Kaggle competitions</li><li>Developer relations</li><li>Partnerships and sponsorships</li><li>Volunteer management</li><li>Digital campaigns</li></ul></div>
+          <div><h3>Tools</h3><ul class="chips"><li>Kaggle</li><li>Devpost</li><li>Bevy</li><li>Luma</li><li>Meetup</li><li>Discord</li><li>Slack</li><li>Notion</li><li>Airtable</li><li>Eventbrite</li><li>Microsoft Project</li><li>Google Workspace</li><li>Canva</li><li>Agile and Scrum</li></ul></div>
+          <div><h3>Languages</h3><p>Bengali (native) · English (fluent) · Hindi (conversational)</p></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 </main>
 
-<section class="cover" id="contact" aria-labelledby="h-contact">
-  <svg class="rose" data-rose="cover" viewBox="0 0 400 400" aria-hidden="true" focusable="false"></svg>
+<section class="contact" id="contact" aria-labelledby="h-contact">
   <div class="w">
-    <h2 id="h-contact">Let's work together.</h2>
-    <p>Hackathons, developer communities, youth programs, sponsorships or speaking. Email is the fastest way to reach me.</p>
-    <a class="mail" href="mailto:shahriar@sarc.edu.bd">shahriar@sarc.edu.bd</a>
-    <div class="ctas">
-      <a class="btn solid" href="mailto:shahriar@sarc.edu.bd">Email me</a>
-      <a class="btn" href="resume.html">View résumé</a>
+    <div class="win on compose">
+      <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">new_message</span><i></i></div>
+      <div class="wb">
+        <p class="field"><span>To:</span><a href="mailto:shahriar@sarc.edu.bd">shahriar@sarc.edu.bd</a></p>
+        <p class="field"><span>Re:</span>Hackathons, communities, youth programs, sponsorships or speaking</p>
+        <h2 id="h-contact">Let's work together.</h2>
+        <p class="msg">Email is the fastest way to reach me.</p>
+        <div class="ctas">
+          <a class="btn go" href="mailto:shahriar@sarc.edu.bd">Send email</a>
+          <a class="btn" href="resume.html">View résumé</a>
+        </div>
+        <ul class="social"><li><a href="https://www.linkedin.com/in/msaevan101" rel="me noopener" target="_blank" aria-label="LinkedIn, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94ZM20.44 13.4c0-3.06-1.63-4.48-3.8-4.48a3.3 3.3 0 0 0-2.98 1.64V8.5h-3.38V20h3.38v-6.06c0-1.6.3-3.15 2.29-3.15 1.96 0 1.99 1.83 1.99 3.25V20h3.38v-6.6Z" fill="currentColor"/></svg></a></li><li><a href="https://www.facebook.com/shahriarazadevan" rel="me noopener" target="_blank" aria-label="Facebook, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.53l.38-2.94H13.5V8.69c0-.85.24-1.43 1.46-1.43h1.56V4.63a20.9 20.9 0 0 0-2.27-.12c-2.25 0-3.79 1.37-3.79 3.9v2.15H7.92v2.94h2.54V21h3.04Z" fill="currentColor"/></svg></a></li><li><a href="https://www.instagram.com/msaevan101" rel="me noopener" target="_blank" aria-label="Instagram, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a></li><li><a href="https://x.com/msaevan101" rel="me noopener" target="_blank" aria-label="X, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.42 4.74H5.6l11.07 14.43Z" fill="currentColor"/></svg></a></li><li><a href="https://www.kaggle.com/msaevan" rel="me noopener" target="_blank" aria-label="Kaggle, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.4 21.1c-.04.13-.17.2-.39.2h-2.6a.6.6 0 0 1-.48-.24l-4.3-5.48-1.2 1.14v4.2c0 .25-.13.38-.38.38H6.04c-.25 0-.38-.13-.38-.38V3.1c0-.25.13-.38.38-.38h2.01c.25 0 .38.13.38.38v10.38l5.15-5.2a.6.6 0 0 1 .46-.22h2.69c.17 0 .27.07.32.21.04.16.03.27-.05.33l-5.45 5.27 5.68 6.95c.1.1.12.2.07.29Z" fill="currentColor"/></svg></a></li></ul>
+      </div>
     </div>
-    <ul class="social"><li><a href="https://www.linkedin.com/in/msaevan101" rel="me noopener" target="_blank" aria-label="LinkedIn, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3a1.97 1.97 0 1 0 0 3.94 1.97 1.97 0 0 0 0-3.94ZM20.44 13.4c0-3.06-1.63-4.48-3.8-4.48a3.3 3.3 0 0 0-2.98 1.64V8.5h-3.38V20h3.38v-6.06c0-1.6.3-3.15 2.29-3.15 1.96 0 1.99 1.83 1.99 3.25V20h3.38v-6.6Z" fill="currentColor"/></svg></a></li><li><a href="https://www.facebook.com/shahriarazadevan" rel="me noopener" target="_blank" aria-label="Facebook, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.53l.38-2.94H13.5V8.69c0-.85.24-1.43 1.46-1.43h1.56V4.63a20.9 20.9 0 0 0-2.27-.12c-2.25 0-3.79 1.37-3.79 3.9v2.15H7.92v2.94h2.54V21h3.04Z" fill="currentColor"/></svg></a></li><li><a href="https://www.instagram.com/msaevan101" rel="me noopener" target="_blank" aria-label="Instagram, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a></li><li><a href="https://x.com/msaevan101" rel="me noopener" target="_blank" aria-label="X, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.42 4.74H5.6l11.07 14.43Z" fill="currentColor"/></svg></a></li><li><a href="https://www.kaggle.com/msaevan" rel="me noopener" target="_blank" aria-label="Kaggle, opens in new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.4 21.1c-.04.13-.17.2-.39.2h-2.6a.6.6 0 0 1-.48-.24l-4.3-5.48-1.2 1.14v4.2c0 .25-.13.38-.38.38H6.04c-.25 0-.38-.13-.38-.38V3.1c0-.25.13-.38.38-.38h2.01c.25 0 .38.13.38.38v10.38l5.15-5.2a.6.6 0 0 1 .46-.22h2.69c.17 0 .27.07.32.21.04.16.03.27-.05.33l-5.45 5.27 5.68 6.95c.1.1.12.2.07.29Z" fill="currentColor"/></svg></a></li></ul>
   </div>
 </section>
 
@@ -654,25 +620,31 @@ MLBD7000&lt;&lt;42EVENTS&lt;&lt;11HACKATHONS2026&lt;&lt;DHAKA&lt;</p>
   addEventListener('keydown',function(e){if(e.key==='Escape'&&bar.classList.contains('open')){setMenu(false);mb.focus()}});
   var tb=document.getElementById('theme'),dq=matchMedia('(prefers-color-scheme: dark)');
   function cur(){return r.getAttribute('data-theme')||(dq.matches?'dark':'light')}
-  function sync(){var d=cur()==='dark';tb.setAttribute('aria-pressed',d);document.querySelectorAll('meta[name=theme-color]').forEach(function(m){m.content=d?'#0a2c24':'#0d3b30'})}
+  function sync(){var d=cur()==='dark';tb.setAttribute('aria-pressed',d);document.querySelectorAll('meta[name=theme-color]').forEach(function(m){m.content=d?'#141a33':'#efe6d2'})}
   tb.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}sync()});
   dq.addEventListener('change',sync);sync();
-  /* an event photo that fails to load takes its frame with it */
-  document.querySelectorAll('img[data-ext]').forEach(function(i){function gone(){var f=i.closest('figure');if(!f)return;var en=f.closest('.entry');if(en)en.classList.add('nophoto');f.remove()}i.addEventListener('error',gone);if(i.complete&&i.naturalWidth===0&&i.src)gone()});
-  /* guilloché rosettes, drawn once */
-  document.querySelectorAll('[data-rose]').forEach(function(s){
-    var big=s.dataset.rose==='cover',N=big?36:28,S=360,d='',TAU=Math.PI*2;
-    for(var i=0;i<N;i++){var ph=i*TAU/N;for(var j=0;j<=S;j++){var t=j/S*TAU,rr=(big?118:110)+(big?52:46)*Math.sin(7*t+ph)*Math.cos(3*t)+12*Math.sin(19*t);
-      d+=(j?'L':'M')+(200+rr*Math.cos(t)).toFixed(1)+' '+(200+rr*Math.sin(t)).toFixed(1)}}
-    for(var k=0;k<3;k++){var rad=176+k*7;d+='M'+(200+rad)+' 200A'+rad+' '+rad+' 0 1 0 '+(200-rad)+' 200A'+rad+' '+rad+' 0 1 0 '+(200+rad)+' 200'}
-    var p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);p.setAttribute('fill','none');p.setAttribute('stroke','currentColor');p.setAttribute('stroke-width',big?'.45':'.4');s.appendChild(p)});
-  /* stamps press once as they arrive */
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;
-  var stamps=[].slice.call(document.querySelectorAll('.stamp'));
-  r.classList.add('armed');
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('pressed');io.unobserve(e.target)}})},{threshold:.6,rootMargin:'0px 0px -8% 0px'});
-  stamps.forEach(function(s,i){if(s.closest('.hero')){s.style.animationDelay='.35s';s.classList.add('pressed')}else io.observe(s)});
-  setTimeout(function(){stamps.forEach(function(s){if(!s.classList.contains('pressed')&&s.getBoundingClientRect().top<innerHeight)s.classList.add('pressed')})},2500);
+  /* menu-bar clock, Dhaka time */
+  var ck=document.getElementById('clock');
+  function tick(){try{ck.textContent='Dhaka '+new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Dhaka'}).format(new Date())}catch(e){}}
+  tick();setInterval(tick,15000);
+  /* an event photo that fails takes its frame with it */
+  document.querySelectorAll('img[data-ext]').forEach(function(i){function gone(){var w=i.closest('.win');if(!w)return;if(w.classList.contains('band'))w.remove();else w.classList.add('nophoto')}i.addEventListener('error',gone);if(i.complete&&i.naturalWidth===0&&i.src)gone()});
+  var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* the terminal types its stats once */
+  var t=document.getElementById('term');
+  if(!still&&t){var lines=[].slice.call(t.querySelectorAll('p')),html=lines.map(function(p){return p.innerHTML});
+    t.style.minHeight=t.offsetHeight+'px';lines.forEach(function(p){p.innerHTML='';p.style.visibility='hidden'});
+    var li=0;function next(){if(li>=lines.length)return;var p=lines[li],h=html[li],tmp=document.createElement('div');tmp.innerHTML=h;var txt=tmp.textContent,n=0;p.style.visibility='';
+      if(li===lines.length-1){p.innerHTML=h;return}
+      (function step(){n+=2;p.textContent=txt.slice(0,n);if(n<txt.length)setTimeout(step,18);else{p.innerHTML=h;li++;setTimeout(next,li===1?260:120)}})()}
+    setTimeout(next,500)}
+  /* hero windows can be dragged around the desk */
+  if(still||!matchMedia('(hover:hover) and (pointer:fine) and (min-width:981px)').matches)return;
+  var z=10;document.querySelectorAll('.drag').forEach(function(w){var h=w.querySelector('.tb'),sx,sy,ox=0,oy=0;
+    h.addEventListener('pointerdown',function(e){if(e.button)return;h.setPointerCapture(e.pointerId);sx=e.clientX-ox;sy=e.clientY-oy;w.classList.add('dragging');w.style.zIndex=++z;
+      document.querySelectorAll('.desk .win').forEach(function(x){x.classList.toggle('on',x===w)})});
+    h.addEventListener('pointermove',function(e){if(!w.classList.contains('dragging'))return;ox=e.clientX-sx;oy=e.clientY-sy;w.style.translate=ox+'px '+oy+'px'});
+    function up(){w.classList.remove('dragging')}h.addEventListener('pointerup',up);h.addEventListener('pointercancel',up)});
 })();
 </script>
 </body>
