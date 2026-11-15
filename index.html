@@ -304,6 +304,23 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
 .rail i{position:absolute;inset:0;background:#ffd23f;transform-origin:50% 0;transform:scaleY(0)}
 .mo .log .yr{align-self:start;justify-self:start;padding:0 6px;margin-left:-6px;transition:background .5s cubic-bezier(.22,1,.36,1),color .5s}
 .mo .log li.now .yr{background:#ffd23f;color:#101820}
+/* journey, desktop: a pinned dial; years orbit a ring as you scroll */
+.orbit .log{height:max(440px,calc(100vh - 300px));padding:0;overflow:hidden;position:relative;background:radial-gradient(circle at 30% 50%,#13202a 0,var(--term) 60%)}
+.orbit .log li{position:absolute;left:0;top:0;width:min(540px,46%);display:block;padding:22px 24px 24px;border:1px solid #2f4452;background:#0c141b;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);transform-origin:0 50%;will-change:transform,opacity,filter}
+.orbit .log li:last-child{border-bottom:1px solid #2f4452}
+.orbit .log .yr{display:inline-block;margin:0 0 10px;padding:2px 8px;background:#ffd23f;color:#101820;font-size:20px}
+.orbit .log h3{font-size:28px;margin-bottom:4px}
+.orbit .rail{display:none}
+.dial{position:absolute;border-radius:50%;border:2px solid rgba(184,245,200,.22);box-shadow:0 0 0 18px rgba(184,245,200,.03),inset 0 0 0 26px rgba(16,24,32,.0);pointer-events:none;will-change:transform}
+.dial::before{content:"";position:absolute;inset:44px;border-radius:50%;border:1px dashed rgba(184,245,200,.16)}
+.dial b{position:absolute;left:50%;top:50%;font:400 20px/1 var(--vt);color:var(--term-dim);white-space:nowrap;transition:color .4s}
+.dial b::before{content:"";position:absolute;right:calc(100% + 10px);top:50%;width:18px;height:2px;background:currentColor}
+.dial b.on{color:#ffd23f}
+.bigyr{position:absolute;left:5%;top:50%;translate:0 -50%;font:700 clamp(96px,11vw,170px)/1 var(--pix);color:#ffd23f;letter-spacing:-.02em;pointer-events:none;text-shadow:0 0 40px rgba(255,210,63,.25)}
+.bigyr span{display:block}
+.orbit-n{position:absolute;left:5%;bottom:24px;font:400 20px/1 var(--vt);color:var(--term-dim);letter-spacing:.1em}
+.orbit-n i{display:inline-block;width:120px;height:2px;margin:0 10px 4px;background:#2b3b47;position:relative;vertical-align:middle}
+.orbit-n i::after{content:"";position:absolute;inset:0;background:#ffd23f;transform-origin:0 50%;transform:scaleX(var(--p,0))}
 /* experience: a selection frame glides between rows */
 .hl{position:absolute;left:0;right:0;top:0;z-index:3;pointer-events:none;border:2px solid var(--cobalt);box-shadow:inset 6px 0 0 var(--orange);opacity:0}
 
