@@ -151,7 +151,7 @@ h1.name .o{color:var(--cobalt)}
 .pitch{margin-top:14px;color:var(--ink-2);max-width:56ch}
 .pitch b{color:var(--ink)}
 .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
-.photo{margin:0;position:relative;background:var(--ink)}
+.photo{margin:0;position:relative;background:var(--ink);overflow:hidden}
 .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:contrast(1.05) saturate(1.05)}
 .photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(rgba(0,0,0,.07) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
 .sticker{position:absolute;z-index:5;left:-22px;bottom:22px;rotate:-8deg;background:var(--sun);color:#16130f;border:2px solid var(--edge);box-shadow:3px 3px 0 var(--edge);padding:8px 12px;font:700 14px/1.15 var(--pix);text-align:center}
@@ -196,7 +196,7 @@ section.s{padding:clamp(64px,8vw,112px) 0}
 .p-wide .wb{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:center}
 .shot{margin:0 0 18px;border:2px solid var(--edge);overflow:hidden;background:var(--ink)}
 .p-wide .shot{margin:0}
-.shot img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:scale .4s}
+.shot img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:scale .8s cubic-bezier(.22,1,.36,1)}
 .win:hover .shot img{scale:1.03}
 .meta{font:500 15px/1.3 var(--pix);color:var(--ink-3);margin-bottom:8px}
 .prog h3{font:700 clamp(1.4rem,1.1rem + 1vw,1.9rem)/1.1 var(--pix);margin-bottom:10px}
@@ -294,36 +294,21 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
 /* ---------- motion (js/motion.js); nothing here hides content without JS ---------- */
 .pre .desk-grid{visibility:hidden;animation:unhide 0s 2.6s forwards}
 @keyframes unhide{to{visibility:visible}}
-html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
 .ln-mask{padding:.12em .04em;margin:-.12em -.04em}
-.ch-mask{padding:.1em 0;margin:-.1em 0}
-.photo canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.photo.gl img{opacity:0}
 .fx{position:absolute;left:0;right:0;bottom:-2px;height:3px;background:var(--orange);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
-.prog{transition:translate .5s cubic-bezier(.16,1,.3,1),box-shadow .5s cubic-bezier(.16,1,.3,1)}
+.prog{transition:translate .45s cubic-bezier(.22,1,.36,1),box-shadow .45s cubic-bezier(.22,1,.36,1)}
 .prog:hover{translate:-4px -4px;box-shadow:10px 10px 0 var(--edge)}
-.shot img{transition:none;will-change:transform}
-.win:hover .shot img{scale:1}
 /* journey: progress rail + the current year lights up */
 .mo .log{position:relative;padding-left:calc(clamp(18px,2.6vw,30px) + 22px)}
 .rail{position:absolute;left:clamp(10px,1.4vw,16px);top:clamp(18px,2.6vw,30px);bottom:clamp(18px,2.6vw,30px);width:2px;background:#2b3b47}
-.rail i{position:absolute;inset:0;background:#ffd23f;transform-origin:50% 0;transform:scaleY(0);box-shadow:0 0 12px #ffd23f}
-.mo .log li{opacity:.38;transition:opacity .6s cubic-bezier(.16,1,.3,1)}
-.mo .log li.lit{opacity:1}
-.mo .log .yr{align-self:start;justify-self:start;padding:0 6px;margin-left:-6px;transition:background .4s,color .4s}
+.rail i{position:absolute;inset:0;background:#ffd23f;transform-origin:50% 0;transform:scaleY(0)}
+.mo .log .yr{align-self:start;justify-self:start;padding:0 6px;margin-left:-6px;transition:background .5s cubic-bezier(.22,1,.36,1),color .5s}
 .mo .log li.now .yr{background:#ffd23f;color:#101820}
 /* experience: a selection frame glides between rows */
 .hl{position:absolute;left:0;right:0;top:0;z-index:3;pointer-events:none;border:2px solid var(--cobalt);box-shadow:inset 6px 0 0 var(--orange);opacity:0}
-/* cursor */
-.cz{position:fixed;left:0;top:0;z-index:300;pointer-events:none;opacity:0}
-.cz-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--orange)}
-.cz-ring{width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid var(--ink);display:grid;place-items:center;font:700 11px/1 var(--pix);letter-spacing:.08em;color:transparent;transition:width .35s cubic-bezier(.16,1,.3,1),height .35s cubic-bezier(.16,1,.3,1),margin .35s cubic-bezier(.16,1,.3,1),background .25s,border-color .25s,color .2s}
-.cz-ring.link{width:58px;height:58px;margin:-29px 0 0 -29px;background:color-mix(in oklab,var(--sun) 40%,transparent);border-color:var(--edge)}
-.cz-ring.drag{width:76px;height:30px;margin:-15px 0 0 -38px;background:var(--cobalt);border-color:var(--edge);color:#fff}
-.mo.fine body,.mo.fine a,.mo.fine button,.mo.fine .tb{cursor:none}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-@media print{.menubar,.ticker,.photo::after,.sticker,.cz,.fx{display:none!important}.win{box-shadow:none}.mo *{visibility:visible!important;opacity:1!important;transform:none!important}}
+@media print{.menubar,.ticker,.photo::after,.sticker,.fx{display:none!important}.win{box-shadow:none}.mo *{visibility:visible!important;opacity:1!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -350,10 +335,10 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
     <article class="win on w-about drag h-card">
       <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">about_me.txt</span><i></i></div>
       <div class="wb">
-        <p class="hello"><b>Hello!</b> I'm</p>
+        <p class="hello"><b>Open to</b> partnerships and speaking</p>
         <h1 class="name p-name" id="h-name"><span>Shahriar</span><span class="o">Azad Evan</span></h1>
-        <p class="role"><span class="p-job-title">Community &amp; Program Manager</span> in <span class="p-locality">Dhaka</span>, <span class="p-country-name">Bangladesh</span>.</p>
-        <p class="pitch p-note">I run free tech programs for students across Bangladesh. I organize <b>Machine Learning Bangladesh</b>, a volunteer AI community of <b>7,000+ members</b>, and in 2026 we ran <b>11 hackathons in five cities</b> with MLH, Google for Developers and the Gemma team.</p>
+        <p class="role"><span class="p-job-title">Community &amp; Program Manager</span> based in <span class="p-locality">Dhaka</span>, <span class="p-country-name">Bangladesh</span>.</p>
+        <p class="pitch p-note">I design and run free technology programs for students across Bangladesh. As organizer of <b>Machine Learning Bangladesh</b>, a volunteer AI community of <b>7,000+ members</b>, I led <b>11 hackathons across five cities</b> in 2026 with MLH, Google for Developers and the Gemma team.</p>
         <div class="ctas">
           <a class="btn go u-email" href="mailto:shahriar@sarc.edu.bd"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2V5Zm2 2v1h1v1h2v1h2v1h2v1h2v-1h2v-1h2V9h2V8h1V7H4Zm16 3h-1v1h-2v1h-2v1h-2v1h-2v-1H9v-1H7v-1H5v-1H4v7h16v-7Z" fill="currentColor"/></svg>Email me</a>
           <a class="btn" href="resume.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 3h2v10h2v-2h2v2h-2v2h-2v2h-2v-2H9v-2H7v-2h2v2h2V3ZM4 19h16v2H4v-2Z" fill="currentColor"/></svg>Download résumé</a>
@@ -383,9 +368,9 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 
 <div class="ticker" aria-label="Programs delivered with">
   <div class="row">
-    <p>Programs delivered with</p>
+    <p>In partnership with</p>
     <ul><li>Google for Developers</li><li>Google DeepMind (Gemma)</li><li>Kaggle</li><li>Major League Hacking</li><li>HerWILL</li><li>EMK Center</li><li>GDG Dhaka</li></ul>
-    <p aria-hidden="true">Programs delivered with</p>
+    <p aria-hidden="true">In partnership with</p>
     <ul aria-hidden="true"><li>Google for Developers</li><li>Google DeepMind (Gemma)</li><li>Kaggle</li><li>Major League Hacking</li><li>HerWILL</li><li>EMK Center</li><li>GDG Dhaka</li></ul>
   </div>
 </div>
@@ -394,7 +379,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <div class="w">
     <div class="sh">
       <h2 id="h-work" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#ffd23f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Programs</h2>
-      <p>Hackathons, Kaggle competitions and community programs, and what each one produced. Most were run by volunteers and free for every participant.</p>
+      <p>Hackathons, Kaggle competitions and community programs, with the outcomes each delivered. Most were volunteer-run and free to every participant.</p>
     </div>
     <div class="progs">
       <figure class="win band">
@@ -409,7 +394,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
           <div>
             <p class="meta">Hackathon · July 2026 · Organizer</p>
             <h3>Build With Gemma @Bangladesh</h3>
-            <p>A hybrid hackathon at United International University, part of Google DeepMind's global Build with Gemma series. Planned in about a week, judged on Kaggle, with a prize pool funded by the Gemma team and hosted with the IEEE Computer Society UIU chapter. Six tracks covered problems like Bangla-language access, rural healthcare and offline study tools.</p>
+            <p>A hybrid hackathon at United International University, part of Google DeepMind's global Build with Gemma series. Delivered on a one-week planning timeline, judged on Kaggle, with a prize pool funded by the Gemma team and hosted with the IEEE Computer Society UIU chapter. Six tracks covered problems like Bangla-language access, rural healthcare and offline study tools.</p>
             <dl class="nums"><div><dt>registered</dt><dd>268</dd></div><div><dt>teams</dt><dd>82</dd></div><div><dt>universities</dt><dd>42</dd></div><div><dt>projects</dt><dd>47</dd></div></dl>
             <p class="lnk"><a href="https://mlbangladesh.org/e/bw-gemma" target="_blank" rel="noopener">Event page</a></p>
           </div>
@@ -422,7 +407,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
           <div class="shot"><img data-ext src="https://zhqzscggtcjmtjvmmktp.supabase.co/storage/v1/render/image/public/event-media/65c9249e-0bae-4254-bc53-e82098c13948/7cb1a0e9-b0c8-4bb5-a055-2acb32b48189.webp?width=880&amp;height=660&amp;resize=cover&amp;quality=80" alt="Students building at Build With AI Hack Days at Daffodil International University" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="880" height="660"></div>
           <p class="meta">Hackathon series · May – Oct 2026 · Series lead</p>
           <h3>Build With AI Hack Days</h3>
-          <p>ML Bangladesh's first in-person hackathons, backed by MLH and Google for Developers: a free one-day format that takes students from a workshop to a deployed project. It ran at UITS, DIU, Rajshahi University, SEU, RUET, Bangladesh Agricultural University and the EMK Center, followed by Hacktoberfest editions in Dinajpur and Dhaka. I also sat on the judging panel at UITS.</p>
+          <p>ML Bangladesh's first in-person hackathon series, supported by MLH and Google for Developers: a free one-day format that takes students from workshop to deployed project. Editions ran at UITS, DIU, Rajshahi University, SEU, RUET, Bangladesh Agricultural University and the EMK Center, followed by Hacktoberfest editions in Dinajpur and Dhaka. I also served on the judging panel at UITS.</p>
           <dl class="nums"><div><dt>venues</dt><dd>7</dd></div><div><dt>Hacktoberfest editions</dt><dd>2</dd></div></dl>
           <p class="lnk"><a href="https://mlbangladesh.org/events" target="_blank" rel="noopener">Event archive</a></p>
         </div>
@@ -434,7 +419,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
           <div class="shot"><img data-ext src="https://mlbangladesh.org/media/f6d05ba2-76b6-4bf6-98d2-52a37a856d6c.w1024.webp" alt="Participants at the Tech For Her hackathon at Asian University for Women" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="1024" height="683"></div>
           <p class="meta">Hackathon · September 2026 · Co-organizer and judge</p>
           <h3>Tech For Her Hackathon 2026</h3>
-          <p>A one-day hackathon for students at Asian University for Women in Chattogram, co-organized by ML Bangladesh and HerWILL. I sat on the judging panel. The winning team, HerFinance, was covered by The Daily Star and The Business Standard.</p>
+          <p>A one-day hackathon for students at Asian University for Women in Chattogram, co-organized by ML Bangladesh and HerWILL. I served on the judging panel. The winning team, HerFinance, was covered by The Daily Star and The Business Standard.</p>
           <dl class="nums"><div><dt>teams</dt><dd>12</dd></div></dl>
           <p class="lnk"><a href="https://www.thedailystar.net/business/news/herfinance-crowned-champion-tech-her-hackathon-2026-4286956" target="_blank" rel="noopener">The Daily Star</a></p>
         </div>
@@ -445,7 +430,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
         <div class="wb">
           <p class="meta">Kaggle competition · Feb – May 2024 · Co-host</p>
           <h3>ML Olympiad 2024: CO₂ Emissions Prediction Challenge</h3>
-          <p>A national competition in Google's worldwide ML Olympiad, run with GDG Dhaka, predicting per-capita emissions for 2030. It closed with a two-day finale at UIU and is listed on the Google Developers Blog, with me named as host.</p>
+          <p>A national round of Google's worldwide ML Olympiad, co-hosted with GDG Dhaka, challenging participants to predict per-capita CO₂ emissions for 2030. It concluded with a two-day finale at UIU and is featured on the Google Developers Blog, which names me as host.</p>
           <dl class="nums"><div><dt>entrants</dt><dd>353</dd></div><div><dt>teams</dt><dd>70</dd></div><div><dt>submissions</dt><dd>1,160</dd></div></dl>
           <p class="lnk"><a href="https://www.kaggle.com/competitions/ml-olympiad-co2-emissions-prediction-challenge" target="_blank" rel="noopener">Kaggle</a><a href="https://developers.googleblog.com/en/ml-olympiad-2024-globally-distributed-ml-competitions-by-google-ml-community/" target="_blank" rel="noopener">Google Developers Blog</a></p>
         </div>
@@ -456,7 +441,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
         <div class="wb">
           <p class="meta">Kaggle competition · Sep – Oct 2026 · Host</p>
           <h3>Kaggle Community Olympiad: Dhaka Breath Index</h3>
-          <p>A forecasting competition on PM2.5 air pollution across Bangladeshi cities. Notebook-only rules with documented reasoning screened out unedited AutoML and LLM templates, so the rankings reward real modelling work.</p>
+          <p>A forecasting competition on PM2.5 air pollution across Bangladeshi cities. Notebook-only submissions with documented reasoning filtered out unedited AutoML and LLM templates, so the rankings reflect genuine modelling work.</p>
           <dl class="nums"><div><dt>entrants</dt><dd>72</dd></div><div><dt>teams</dt><dd>26</dd></div><div><dt>submissions</dt><dd>333</dd></div></dl>
           <p class="lnk"><a href="https://www.kaggle.com/competitions/kaggle-community-olympiad-dhaka-breath-index" target="_blank" rel="noopener">Kaggle</a></p>
         </div>
@@ -469,7 +454,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
           <div>
             <p class="meta">Nonprofit · Sep 2025 – present · Founder</p>
             <h3>Cedar Initiative</h3>
-            <p>A youth-led nonprofit working on the Sustainable Development Goals. Its programs include CS Ed Week 2025 in Rangpur and Ushnota Abhijan 2025, a winter-clothing drive that became an emergency response to the Karail slum fire. ML Bangladesh runs as part of its STEM programs.</p>
+            <p>A youth-led nonprofit working on the Sustainable Development Goals. Its programs include CS Ed Week 2025 in Rangpur and Ushnota Abhijan 2025, a winter-clothing drive that became an emergency response to the Karail slum fire. ML Bangladesh operates within its STEM portfolio.</p>
             <dl class="nums"><div><dt>people reached</dt><dd>4,000+</dd></div><div><dt>items of clothing donated</dt><dd>1,000</dd></div></dl>
             <p class="lnk"><a href="https://cedar-initiative.org/" target="_blank" rel="noopener">cedar-initiative.org</a></p>
           </div>
@@ -483,18 +468,18 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <div class="w">
     <div class="sh">
       <h2 id="h-journey" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#2fbf8f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Journey</h2>
-      <p>Six years, from Pirganj in Rangpur to national programs.</p>
+      <p>From one district in Rangpur to national programs, 2020 to 2026.</p>
     </div>
     <div class="win on">
       <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">history.log</span><i></i></div>
       <ol class="log">
-        <li><span class="yr">2020</span><div><h3>It starts with Crowdsource.</h3><p class="pl">Pirganj, Rangpur</p><p>Became a Google Crowdsource Influencer, hosting training events and bringing new contributors in.</p></div></li>
-        <li><span class="yr">2021</span><div><h3>Campus and code.</h3><p class="pl">Rangpur</p><p>Led the AngelHack Campus Hub at my college, taught programming online with Codecademy Chapters, and was named a Crowdsource Community Champion.</p></div></li>
-        <li><span class="yr">2022</span><div><h3>Into developer communities.</h3><p class="pl">Dhaka</p><p>Joined Google Developer Group Dhaka as an Ambassador and started facilitating #IAmRemarkable workshops.</p></div></li>
-        <li><span class="yr">2023</span><div><h3>A community of our own.</h3><p class="pl">Dhaka · North Bengal</p><p>Started TFUG North Bengal, today ML Bangladesh. Founded UniDevs, began computer science at UIU and became GDG Dhaka's Communications Lead.</p></div></li>
-        <li><span class="yr">2024</span><div><h3>The national stage.</h3><p class="pl">Dhaka → Cedar Rapids, Iowa</p><p>ML Olympiad drew 353 entrants. The community became ML Bangladesh, and a CCI scholarship took me to Iowa.</p></div></li>
-        <li><span class="yr">2025</span><div><h3>Iowa, and back.</h3><p class="pl">Cedar Rapids → Dhaka</p><p>The Platinum Eagle Leadership Award and Dean's List at Kirkwood. Home again, I founded Cedar Initiative and placed 3rd in the CICA AI Art Competition.</p></div></li>
-        <li><span class="yr">2026</span><div><h3>Eleven hackathons, five cities.</h3><p class="pl">Five cities · Moscow</p><p>Seven Build With AI Hack Days, two Hacktoberfest editions, Build With Gemma and Tech For Her, plus a second Kaggle competition on Dhaka's air. In October, part of Bangladesh's 19-member delegation to the Global Digital Forum in Moscow.</p></div></li>
+        <li><span class="yr">2020</span><div><h3>Getting started with Google Crowdsource.</h3><p class="pl">Pirganj, Rangpur</p><p>Became a Google Crowdsource Influencer, hosting training events and onboarding new contributors.</p></div></li>
+        <li><span class="yr">2021</span><div><h3>Campus leadership and teaching.</h3><p class="pl">Rangpur</p><p>Led the AngelHack Campus Hub at my college, taught programming online with Codecademy Chapters, and was named a Crowdsource Community Champion.</p></div></li>
+        <li><span class="yr">2022</span><div><h3>Joining developer communities.</h3><p class="pl">Dhaka</p><p>Joined Google Developer Group Dhaka as an Ambassador and started facilitating #IAmRemarkable workshops.</p></div></li>
+        <li><span class="yr">2023</span><div><h3>Building a community of our own.</h3><p class="pl">Dhaka · North Bengal</p><p>Started TFUG North Bengal, today ML Bangladesh. Founded UniDevs, began computer science at UIU and became GDG Dhaka's Communications Lead.</p></div></li>
+        <li><span class="yr">2024</span><div><h3>Scaling nationally.</h3><p class="pl">Dhaka → Cedar Rapids, Iowa</p><p>ML Olympiad drew 353 entrants, the community was renamed Machine Learning Bangladesh, and a CCI scholarship took me to Iowa.</p></div></li>
+        <li><span class="yr">2025</span><div><h3>Iowa, and the return home.</h3><p class="pl">Cedar Rapids → Dhaka</p><p>Received the Platinum Eagle Leadership Award and made the Dean's List at Kirkwood. Back in Dhaka, I founded Cedar Initiative and placed 3rd in the CICA AI Art Competition.</p></div></li>
+        <li><span class="yr">2026</span><div><h3>Eleven hackathons in five cities.</h3><p class="pl">Five cities · Moscow</p><p>Seven Build With AI Hack Days, two Hacktoberfest editions, Build With Gemma and Tech For Her, plus a second Kaggle competition on Dhaka's air quality. In October, I joined Bangladesh's 19-member delegation to the Global Digital Forum in Moscow.</p></div></li>
       </ol>
     </div>
   </div>
@@ -504,7 +489,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <div class="w">
     <div class="sh">
       <h2 id="h-exp" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#ff5a1f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Experience</h2>
-      <p>Six years of community leadership, alongside roles in startups, nonprofits and economic development.</p>
+      <p>Six years of community leadership alongside roles in startups, nonprofits and economic development.</p>
     </div>
     <div class="win list">
       <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">experience — 15 items</span><i></i></div>
@@ -588,7 +573,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <div class="w">
     <div class="sh">
       <h2 id="h-bg" class="folder"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M2 6h14l4 4h22v24H2z" fill="#2fbf8f" stroke="currentColor" stroke-width="2.5"/><path d="M2 14h40" stroke="currentColor" stroke-width="2.5"/></svg>Background</h2>
-      <p>Computer science in Dhaka, project management in Iowa.</p>
+      <p>Computer science in Dhaka; project management in Iowa.</p>
     </div>
     <div class="props">
       <div class="win">
@@ -621,9 +606,9 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
       <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">new_message</span><i></i></div>
       <div class="wb">
         <p class="field"><span>To:</span><a href="mailto:shahriar@sarc.edu.bd">shahriar@sarc.edu.bd</a></p>
-        <p class="field"><span>Re:</span>Hackathons, communities, youth programs, sponsorships or speaking</p>
+        <p class="field"><span>Re:</span>Hackathons, community programs, partnerships, sponsorships or speaking</p>
         <h2 id="h-contact">Let's work together.</h2>
-        <p class="msg">Email is the fastest way to reach me.</p>
+        <p class="msg">Whether it's a partnership, a sponsorship or a speaking invitation, email is the fastest way to reach me.</p>
         <div class="ctas">
           <a class="btn go" href="mailto:shahriar@sarc.edu.bd">Send email</a>
           <a class="btn" href="resume.html">View résumé</a>
@@ -682,8 +667,6 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 <script src="js/gsap.min.js"></script>
 <script src="js/ScrollTrigger.min.js"></script>
 <script src="js/SplitText.min.js"></script>
-<script src="js/ScrambleTextPlugin.min.js"></script>
-<script src="js/lenis.min.js"></script>
 <script src="js/motion.js"></script>
 </body>
 </html>
