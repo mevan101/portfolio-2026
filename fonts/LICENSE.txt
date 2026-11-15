@@ -95,3 +95,7 @@ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
 Pixelify Sans (pixelify.woff2) and VT323 (vt323.woff2) are licensed under the SIL Open Font License 1.1. Files from Google Fonts.
+
+JavaScript libraries in js/:
+- GSAP 3.13 (gsap, ScrollTrigger, SplitText, ScrambleTextPlugin), GreenSock Standard "no charge" license, https://gsap.com/standard-license
+- Lenis 1.3.4, MIT license, https://github.com/darkroomengineering/lenis
