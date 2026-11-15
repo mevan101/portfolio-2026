@@ -1,6 +1,6 @@
 /* Motion for msaevan.com.
-   Scroll drives the page: almost everything is scrubbed to the scroll position with
-   a little inertia, so it moves with the reader and reverses when they scroll back.
+   Scroll-linked reveals, parallax and the hero parting are native CSS scroll-driven
+   animations (see the stylesheet). GSAP handles the timed intro and the Journey dial.
    Without JS, or with reduced motion, the page is static and complete. */
 (function () {
   var r = document.documentElement;
@@ -16,10 +16,9 @@
   var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
   var clamp = gsap.utils.clamp;
 
-  /* reading progress along the menu bar */
+  /* reading progress along the menu bar (animated by a CSS scroll timeline) */
   var bar = q('.menubar'), fx = document.createElement('i');
   fx.className = 'fx'; fx.setAttribute('aria-hidden', 'true'); bar.appendChild(fx);
-  gsap.to(fx, { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: 0.4 } });
 
   /* ---------- hero: a calm entrance, then the windows part as you scroll away ---------- */
   var desk = q('.desk'), about = q('.w-about'), photo = q('.w-photo'), term = q('.w-term'), stk = q('.sticker');
@@ -33,17 +32,10 @@
     tl.from(about, { y: 32, autoAlpha: 0, duration: 1.1 }, 0)
       .from(name.lines, { yPercent: 105, duration: 1.2, stagger: 0.1, ease: 'expo.out' }, 0.15)
       .from(qa('.hello, .role, .pitch, .ctas', about), { y: 18, autoAlpha: 0, stagger: 0.08 }, 0.35)
-      .fromTo(photo, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% -3% -3% 0%)', duration: 1.3, ease: 'expo.inOut', clearProps: 'clipPath' }, 0.2)
-      .from(img, { scale: 1.12, duration: 1.8, ease: 'expo.out' }, 0.45)
+      .from(img, { scale: 1.08, duration: 1.8, ease: 'expo.out' }, 0)
       .from(term, { y: 32, autoAlpha: 0, duration: 1.1 }, 0.6)
       .from(qa('.term p'), { autoAlpha: 0, x: -8, duration: 0.6, stagger: 0.12, ease: 'power2.out' }, 0.95)
-      .from(stk, { scale: 0.85, autoAlpha: 0, duration: 0.8, ease: 'back.out(1.6)' }, 1.2)
-      .add(function () {
-        var out = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: { trigger: desk, start: 'top top', end: 'bottom top', scrub: 1 } });
-        out.to(about, { yPercent: -6, autoAlpha: 0.35 }, 0)
-          .to(photo, { yPercent: -22, autoAlpha: 0.35 }, 0)
-          .to(term, { yPercent: -45, autoAlpha: 0.35 }, 0);
-      });
+      .from(stk, { scale: 0.85, autoAlpha: 0, duration: 0.8, ease: 'back.out(1.6)' }, 1.2);
     release();
   }
 
@@ -53,22 +45,6 @@
     var tl = gsap.timeline({ scrollTrigger: { trigger: sh, start: 'top 85%', once: true } });
     tl.from(h, { yPercent: 40, autoAlpha: 0, duration: 1.1, ease: 'expo.out' });
     if (p) tl.from(p, { y: 16, autoAlpha: 0 }, 0.12);
-  });
-
-  /* ---------- scrubbed reveals: rise, scale and come into focus with the scroll ---------- */
-  function scrubIn(els, from, start, end) {
-    els.forEach(function (el) {
-      var to = { ease: 'none', scrollTrigger: { trigger: el, start: start, end: end, scrub: 1 } };
-      Object.keys(from).forEach(function (k) { to[k] = k === 'filter' ? 'blur(0px)' : k === 'autoAlpha' || k === 'scale' ? 1 : 0; });
-      gsap.fromTo(el, from, to);
-    });
-  }
-  var wins = qa('section.s .win, .contact .win').filter(function (w) { return !w.querySelector('.log'); });
-  scrubIn(wins, { y: 90, scale: 0.94, autoAlpha: 0 }, 'top 100%', 'top 62%');
-  scrubIn(qa('.trophies li, .inbox li, .edu li, .kit > div'), { y: 26, autoAlpha: 0, filter: 'blur(6px)' }, 'top 98%', 'top 78%');
-  scrubIn(qa('.job, .lv-g'), { y: 22, autoAlpha: 0 }, 'top 98%', 'top 82%');
-  qa('.shot img').forEach(function (im) {
-    gsap.fromTo(im, { scale: 1.18, yPercent: -5 }, { scale: 1.08, yPercent: 5, ease: 'none', scrollTrigger: { trigger: im.parentNode, start: 'top bottom', end: 'bottom top', scrub: 1 } });
   });
 
   /* ---------- journey ---------- */
@@ -136,7 +112,6 @@
       var rail = document.createElement('span'); rail.className = 'rail'; rail.setAttribute('aria-hidden', 'true'); rail.innerHTML = '<i></i>'; log.appendChild(rail);
       var tw = gsap.to(rail.firstChild, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: log, start: 'top 60%', end: 'bottom 60%', scrub: 1 } });
       var sts = items.map(function (li) {
-        gsap.fromTo(li, { y: 22, autoAlpha: 0 }, { y: 0, autoAlpha: 1, ease: 'none', scrollTrigger: { trigger: li, start: 'top 98%', end: 'top 80%', scrub: 1 } });
         return ScrollTrigger.create({ trigger: li, start: 'top 60%', end: 'bottom 60%', onToggle: function (s) { li.classList.toggle('now', s.isActive); } });
       });
       return function () { tw.scrollTrigger.kill(); sts.forEach(function (s) { s.kill(); }); rail.remove(); };
