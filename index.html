@@ -59,26 +59,27 @@
 /* A late-80s desktop: cream, ink, cobalt, one hot orange, one sticker yellow. */
 :root{
   --desk:#efe6d2;--dot:#d9cdb3;--win:#fffaf0;--win-2:#f6efe0;--ink:#16130f;--ink-2:#3d372e;--ink-3:#5f574b;--edge:#16130f;
-  --cobalt:#2643d6;--cobalt-2:#1b32a8;--orange:#ff5a1f;--sun:#ffd23f;--mint:#2fbf8f;--link:#1b32a8;
+  --cobalt:#2643d6;--cobalt-2:#1b32a8;--accent-solid:#2643d6;--accent-solid-2:#1b32a8;--orange:#ff5a1f;--sun:#ffd23f;--mint:#2fbf8f;--link:#1b32a8;
   --term:#101820;--term-ink:#b8f5c8;--term-dim:#6fa889;
   --pix:"Pixelify Sans",ui-monospace,monospace;--sans:"Google Sans Flex",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--vt:"VT323",ui-monospace,Menlo,monospace;
   --sh:5px 5px 0 var(--edge);--w:1240px;--g:clamp(14px,3.6vw,36px);color-scheme:light dark;
 }
-:root:has(> head > meta[name="color-scheme"][content="dark"]){--desk:#141a33;--dot:#232b52;--win:#1d2340;--win-2:#252c4d;--ink:#f3ecdc;--ink-2:#cfc7b6;--ink-3:#a9a291;--edge:#05070f;--cobalt:#5b75ff;--cobalt-2:#3b55e6;--link:#9fb0ff;--sh:5px 5px 0 #05070f;color-scheme:dark}
-@media (prefers-color-scheme:dark){:root:not(:has(> head > meta[name="color-scheme"][content="light"])){--desk:#141a33;--dot:#232b52;--win:#1d2340;--win-2:#252c4d;--ink:#f3ecdc;--ink-2:#cfc7b6;--ink-3:#a9a291;--edge:#05070f;--cobalt:#5b75ff;--cobalt-2:#3b55e6;--link:#9fb0ff;--sh:5px 5px 0 #05070f;color-scheme:dark}}
+:root:has(> head > meta[name="color-scheme"][content="dark"]){--desk:#141a33;--dot:#232b52;--win:#1d2340;--win-2:#252c4d;--ink:#f3ecdc;--ink-2:#cfc7b6;--ink-3:#a9a291;--edge:#05070f;--cobalt:#5b75ff;--cobalt-2:#3b55e6;--accent-solid:#2f45cc;--accent-solid-2:#2438ad;--link:#9fb0ff;--sh:5px 5px 0 #05070f;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not(:has(> head > meta[name="color-scheme"][content="light"])){--desk:#141a33;--dot:#232b52;--win:#1d2340;--win-2:#252c4d;--ink:#f3ecdc;--ink-2:#cfc7b6;--ink-3:#a9a291;--edge:#05070f;--cobalt:#5b75ff;--cobalt-2:#3b55e6;--accent-solid:#2f45cc;--accent-solid-2:#2438ad;--link:#9fb0ff;--sh:5px 5px 0 #05070f;color-scheme:dark}}
 
 :root:has(> head > meta[name="color-scheme"][content="light"]){color-scheme:light}
+.theme-swap *,.theme-swap *::before,.theme-swap *::after{transition:none!important}
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:60px;@media (prefers-reduced-motion:no-preference){scroll-behavior:smooth}}
-body{margin:0;color:var(--ink);font:400 17px/1.6 var(--sans);font-size-adjust:from-font;-webkit-font-smoothing:antialiased;overflow-x:clip;
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;touch-action:manipulation;scroll-padding-top:60px;@media (prefers-reduced-motion:no-preference){scroll-behavior:smooth}}
+body{margin:0;color:var(--ink);font:400 1.0625rem/1.6 var(--sans);font-size-adjust:from-font;-webkit-font-smoothing:antialiased;overflow-x:clip;
   background:var(--desk) radial-gradient(var(--dot) 1.2px,transparent 1.3px) 0 0/14px 14px}
 ::selection{background:var(--sun);color:#16130f}
-:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
 a{color:var(--link);text-decoration-thickness:2px;text-underline-offset:.2em}
-a:hover{background:var(--sun);color:#16130f}
+@media (hover:hover){a:hover{background:var(--sun);color:#16130f}}
 img{max-width:100%;height:auto;display:block}
 h1,h2,h3,h4{margin:0;font-weight:700;text-wrap:balance}
-p{margin:0}ul,ol{margin:0;padding:0;list-style:none}
+p{margin:0;text-wrap:pretty}ul,ol{margin:0;padding:0;list-style:none}
 .w{max-width:var(--w);margin:0 auto;padding:0 var(--g)}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:10px;top:-60px;z-index:100;background:var(--sun);color:#16130f;padding:10px 14px;border:2px solid #16130f;font-weight:700}
@@ -94,17 +95,17 @@ html{--sb-thumb:var(--cobalt);--sb-track:var(--win-2);scrollbar-color:var(--sb-t
 .logo .short{display:none}
 .links{display:flex;gap:0}
 .links a{color:var(--ink);text-decoration:none;padding:16px 11px}
-.links a:hover,.logo:hover{background:var(--cobalt);color:#fff}
+@media (hover:hover){.links a:hover,.logo:hover{background:var(--accent-solid);color:#fff}}
 .right{margin-left:auto;display:flex;align-items:center;gap:4px}
 .clock{font-family:var(--vt);font-size:21px;padding:0 10px;color:var(--ink-2);white-space:nowrap}
 .ib{width:44px;height:44px;display:grid;place-items:center;border:0;background:none;color:var(--ink);cursor:pointer}
-.ib:hover{background:var(--cobalt);color:#fff}
+@media (hover:hover){.ib:hover{background:var(--accent-solid);color:#fff}}
 .ib svg{width:20px;height:20px}
 .ib .sun{display:none}
 :root:has(> head > meta[name="color-scheme"][content="dark"]) .ib .sun{display:block}:root:has(> head > meta[name="color-scheme"][content="dark"]) .ib .moon{display:none}
 @media (prefers-color-scheme:dark){:root:not(:has(> head > meta[name="color-scheme"][content="light"])) .ib .sun{display:block}:root:not(:has(> head > meta[name="color-scheme"][content="light"])) .ib .moon{display:none}}
 .cvbtn{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;background:var(--orange);color:#16130f;border:2px solid var(--edge);box-shadow:3px 3px 0 var(--edge);text-decoration:none;font-weight:700}
-.cvbtn:hover{background:var(--sun);color:#16130f}
+@media (hover:hover){.cvbtn:hover{background:var(--sun);color:#16130f}}
 .cvbtn:active{translate:2px 2px;box-shadow:1px 1px 0 var(--edge)}
 #menu{display:none}
 @media (max-width:1180px){
@@ -123,19 +124,17 @@ html{--sb-thumb:var(--cobalt);--sb-track:var(--win-2);scrollbar-color:var(--sb-t
 .tb i{flex:none;width:14px;height:14px;border:2px solid var(--edge);background:var(--win)}
 .tb i.x{background:var(--orange)}
 .tb::before,.tb::after{content:"";flex:1;max-width:none;height:10px;order:0}
-.win.on .tb{background:repeating-linear-gradient(var(--cobalt) 0 2px,var(--cobalt-2) 2px 4px);color:#fff}
-.win.on .tb .ttl{background:var(--cobalt);padding:3px 10px;flex:0 1 auto;max-width:70%;margin:0 auto}
+.win.on .tb{background:repeating-linear-gradient(var(--accent-solid) 0 2px,var(--accent-solid-2) 2px 4px);color:#fff}
+.win.on .tb .ttl{background:var(--accent-solid);padding:3px 10px;flex:0 1 auto;max-width:70%;margin:0 auto}
 .tb::before,.tb::after{display:none}
 .wb{padding:clamp(18px,2.6vw,30px)}
-.drag .tb{cursor:grab}.drag.dragging .tb{cursor:grabbing}
-.drag.dragging{z-index:20}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:2px solid var(--edge);background:var(--win);color:var(--ink);box-shadow:4px 4px 0 var(--edge);font:700 16px/1 var(--pix);text-decoration:none;transition:translate .08s,box-shadow .08s,background .15s}
-.btn:hover{background:var(--sun);color:#16130f}
+@media (hover:hover){.btn:hover{background:var(--sun);color:#16130f}}
 .btn:active{translate:3px 3px;box-shadow:1px 1px 0 var(--edge)}
-.btn.go{background:var(--cobalt);color:#fff}
-.btn.go:hover{background:var(--orange);color:#16130f}
+.btn.go{background:var(--accent-solid);color:#fff}
+@media (hover:hover){.btn.go:hover{background:var(--orange);color:#16130f}}
 .btn svg{width:18px;height:18px}
 
 /* hero desktop */
@@ -175,19 +174,19 @@ h1.name .o{color:var(--cobalt)}
 @media (max-width:560px){.ctas .btn{flex:1 1 100%}.sticker{left:auto;right:10px;bottom:14px}}
 
 /* marquee of partners */
-.ticker{border-top:2px solid var(--edge);border-bottom:2px solid var(--edge);background:var(--cobalt);color:#fff;overflow:hidden;font:600 18px/1 var(--pix)}
+.ticker{border-top:2px solid var(--edge);border-bottom:2px solid var(--edge);background:var(--accent-solid);color:#fff;overflow:hidden;font:600 18px/1 var(--pix)}
 .ticker{position:relative}
 .ticker .row{display:flex;width:max-content;gap:0;padding:14px 0;@media (prefers-reduced-motion:no-preference){animation:tick 38s linear infinite}}
 .ticker.paused .row{animation-play-state:paused}
-.tick-pause{display:none;position:absolute;right:0;top:0;bottom:0;z-index:1;align-items:center;gap:8px;padding:0 16px 0 22px;border:0;border-left:2px solid var(--edge);background:var(--cobalt-2);color:#fff;font:600 15px/1 var(--pix);cursor:pointer;box-shadow:-18px 0 18px -6px var(--cobalt)}
-.tick-pause:hover{background:var(--sun);color:#16130f}
+.tick-pause{display:none;position:absolute;right:0;top:0;bottom:0;z-index:1;align-items:center;gap:8px;padding:0 16px 0 22px;border:0;border-left:2px solid var(--edge);background:var(--accent-solid-2);color:#fff;font:600 15px/1 var(--pix);cursor:pointer;box-shadow:-18px 0 18px -6px var(--accent-solid)}
+@media (hover:hover){.tick-pause:hover{background:var(--sun);color:#16130f}}
 @media (prefers-reduced-motion:no-preference){.tick-pause{display:inline-flex}}
 .ticker ul{display:flex;gap:0}
 .ticker li{padding:0 22px;white-space:nowrap;display:flex;align-items:center;gap:22px}
 .ticker li::after{content:"";width:9px;height:9px;background:var(--sun);rotate:45deg}
 .ticker p{padding:0 22px;white-space:nowrap;color:var(--sun)}
 @keyframes tick{to{translate:-50% 0}}
-.ticker:hover .row{animation-play-state:paused}
+@media (hover:hover){.ticker:hover .row{animation-play-state:paused}}
 
 /* sections */
 section.s{padding:clamp(64px,8vw,112px) 0}
@@ -204,7 +203,7 @@ section.s{padding:clamp(64px,8vw,112px) 0}
 .shot{margin:0 0 18px;border:2px solid var(--edge);overflow:hidden;background:var(--ink)}
 .p-wide .shot{margin:0}
 .shot img{width:100%;aspect-ratio:3/2;object-fit:cover;@media (prefers-reduced-motion:no-preference){transition:scale .8s cubic-bezier(.22,1,.36,1)}}
-.win:hover .shot img{scale:1.03}
+@media (hover:hover){.win:hover .shot img{scale:1.03}}
 .meta{font:500 15px/1.3 var(--pix);color:var(--ink-3);margin-bottom:8px}
 .prog h3{font:700 clamp(1.4rem,1.1rem + 1vw,1.9rem)/1.1 var(--pix);margin-bottom:10px}
 .prog p{color:var(--ink-2)}
@@ -253,13 +252,13 @@ section.s{padding:clamp(64px,8vw,112px) 0}
 .badge{width:52px;height:52px;display:grid;place-items:center;border:2px solid var(--edge);background:var(--sun);color:#16130f;font:400 18px/1 var(--vt);text-align:center;box-shadow:2px 2px 0 var(--edge)}
 .trophies li:nth-child(3n+2) .badge{background:var(--orange)}.trophies li:nth-child(3n) .badge{background:var(--mint)}
 .trophies strong{display:block}
-.trophies span{color:var(--ink-2);font-size:15px}
+.trophies li>div>span{color:var(--ink-2);font-size:15px}
 .inbox li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:14px 0;border-bottom:1px dashed color-mix(in oklab,var(--ink) 30%,transparent)}
 .inbox li:last-child{border-bottom:0}
 .inbox .from{font:600 15px/1.3 var(--pix);color:var(--ink-3)}
 .inbox .dt{font:400 19px/1.2 var(--vt);color:var(--ink-3)}
 .inbox a.t{grid-column:1/-1;font-weight:700;color:var(--ink);text-decoration:none;font-size:17px;line-height:1.35}
-.inbox a.t:hover{text-decoration:underline;background:none;color:var(--link)}
+@media (hover:hover){.inbox a.t:hover{text-decoration:underline;background:none;color:var(--link)}}
 .inbox p{grid-column:1/-1;color:var(--ink-2);font-size:15px}
 .inbox .also a{font-size:15px}
 @media (max-width:860px){.rec{grid-template-columns:minmax(0,1fr)}}
@@ -305,7 +304,7 @@ section.s{padding:clamp(64px,8vw,112px) 0}
 .compose .msg{color:var(--ink-2);max-width:56ch;font-size:18px}
 .social{display:flex;gap:10px;margin-top:22px}
 .social a{width:46px;height:46px;display:grid;place-items:center;border:2px solid var(--edge);background:var(--win);color:var(--ink);box-shadow:3px 3px 0 var(--edge)}
-.social a:hover{background:var(--sun);color:#16130f}
+@media (hover:hover){.social a:hover{background:var(--sun);color:#16130f}}
 .social a:active{translate:2px 2px;box-shadow:1px 1px 0 var(--edge)}
 .social svg{width:19px;height:19px}
 footer{border-top:2px solid var(--edge);background:var(--win);font:500 15px/1.4 var(--pix);color:var(--ink-2)}
@@ -320,7 +319,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
 .ln-mask{padding:.12em .04em;margin:-.12em -.04em}
 .fx{position:absolute;left:0;right:0;bottom:-2px;height:3px;background:var(--orange);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
 .prog{transition:box-shadow .45s cubic-bezier(.22,1,.36,1);@media (prefers-reduced-motion:no-preference){transition:translate .45s cubic-bezier(.22,1,.36,1),box-shadow .45s cubic-bezier(.22,1,.36,1)}}
-.prog:hover{box-shadow:10px 10px 0 var(--edge);@media (prefers-reduced-motion:no-preference){translate:-4px -4px}}
+@media (hover:hover){.prog:hover{box-shadow:10px 10px 0 var(--edge);@media (prefers-reduced-motion:no-preference){translate:-4px -4px}}}
 /* journey: progress rail + the current year lights up */
 .mo .log{position:relative;padding-left:calc(clamp(18px,2.6vw,30px) + 22px)}
 .rail{position:absolute;left:clamp(10px,1.4vw,16px);top:clamp(18px,2.6vw,30px);bottom:clamp(18px,2.6vw,30px);width:2px;background:#2b3b47}
@@ -392,7 +391,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
 <main id="main">
 <section class="desk" aria-labelledby="h-name">
   <div class="w desk-grid">
-    <article class="win on w-about drag h-card">
+    <article class="win on w-about h-card">
       <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">about_me.txt</span><i></i></div>
       <div class="wb">
         <p class="hello"><b>Open to</b> partnerships and speaking</p>
@@ -406,13 +405,13 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
       </div>
     </article>
 
-    <div class="win w-photo drag">
+    <div class="win w-photo">
       <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">washington_dc.jpg</span><i></i></div>
       <figure class="photo"><img class="u-photo" src="hero-portrait-dc.webp" srcset="hero-portrait-dc.webp 480w, hero-portrait-dc@2x.webp 960w" sizes="(max-width:600px) 92vw, (max-width:980px) 46vw, 460px" width="480" height="600" alt="Shahriar Azad Evan in Washington, D.C., with the Washington Monument and flags behind him" fetchpriority="high"></figure>
       <p class="sticker" aria-hidden="true"><b>42</b>events hosted</p>
     </div>
 
-    <div class="win w-term drag">
+    <div class="win w-term">
       <div class="tb" aria-hidden="true"><i class="x"></i><span class="ttl">terminal</span><i></i></div>
       <div class="term" id="term">
         <p><span class="c">evan@dhaka:~$</span> stats --since 2020</p>
@@ -428,7 +427,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
 </section>
 
 <div class="ticker">
-  <button class="tick-pause" type="button" id="tickp">Pause</button>
+  <button class="tick-pause" type="button" id="tickp"><span>Pause</span><span class="sr"> partner list</span></button>
   <div class="row">
     <p>In partnership with</p>
     <ul><li>Google for Developers</li><li>Google DeepMind (Gemma)</li><li>Kaggle</li><li>Major League Hacking</li><li>HerWILL</li><li>EMK Center</li><li>GDG Dhaka</li></ul>
@@ -458,7 +457,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
             <h3>Build With Gemma @Bangladesh</h3>
             <p>A hybrid hackathon at United International University, part of Google DeepMind's global Build with Gemma series. Delivered on a one-week planning timeline, judged on Kaggle, with a prize pool funded by the Gemma team and hosted with the IEEE Computer Society UIU chapter. Six tracks covered problems like Bangla-language access, rural healthcare and offline study tools.</p>
             <dl class="nums"><div><dt>registered</dt><dd>268</dd></div><div><dt>teams</dt><dd>82</dd></div><div><dt>universities</dt><dd>42</dd></div><div><dt>projects</dt><dd>47</dd></div></dl>
-            <p class="lnk"><a href="https://mlbangladesh.org/e/bw-gemma" target="_blank" rel="noopener">Event page</a></p>
+            <p class="lnk"><a href="https://mlbangladesh.org/e/bw-gemma" target="_blank" rel="noopener">Build With Gemma event page</a></p>
           </div>
         </div>
       </article>
@@ -471,7 +470,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
           <h3>Build With AI Hack Days</h3>
           <p>ML Bangladesh's first in-person hackathon series, supported by MLH and Google for Developers: a free one-day format that takes students from workshop to deployed project. Editions ran at UITS, DIU, Rajshahi University, SEU, RUET, Bangladesh Agricultural University and the EMK Center, followed by Hacktoberfest editions in Dinajpur and Dhaka. I also served on the judging panel at UITS.</p>
           <dl class="nums"><div><dt>venues</dt><dd>7</dd></div><div><dt>Hacktoberfest editions</dt><dd>2</dd></div></dl>
-          <p class="lnk"><a href="https://mlbangladesh.org/events" target="_blank" rel="noopener">Event archive</a></p>
+          <p class="lnk"><a href="https://mlbangladesh.org/events" target="_blank" rel="noopener">ML Bangladesh event archive</a></p>
         </div>
       </article>
 
@@ -494,7 +493,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
           <h3>ML Olympiad 2024: CO₂ Emissions Prediction Challenge</h3>
           <p>A national round of Google's worldwide ML Olympiad, co-hosted with GDG Dhaka, challenging participants to predict per-capita CO₂ emissions for 2030. It concluded with a two-day finale at UIU and is featured on the Google Developers Blog, which names me as host.</p>
           <dl class="nums"><div><dt>entrants</dt><dd>353</dd></div><div><dt>teams</dt><dd>70</dd></div><div><dt>submissions</dt><dd>1,160</dd></div></dl>
-          <p class="lnk"><a href="https://www.kaggle.com/competitions/ml-olympiad-co2-emissions-prediction-challenge" target="_blank" rel="noopener">Kaggle</a><a href="https://developers.googleblog.com/en/ml-olympiad-2024-globally-distributed-ml-competitions-by-google-ml-community/" target="_blank" rel="noopener">Google Developers Blog</a></p>
+          <p class="lnk"><a href="https://www.kaggle.com/competitions/ml-olympiad-co2-emissions-prediction-challenge" target="_blank" rel="noopener">ML Olympiad on Kaggle</a><a href="https://developers.googleblog.com/en/ml-olympiad-2024-globally-distributed-ml-competitions-by-google-ml-community/" target="_blank" rel="noopener">Google Developers Blog</a></p>
         </div>
       </article>
 
@@ -505,7 +504,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
           <h3>Kaggle Community Olympiad: Dhaka Breath Index</h3>
           <p>A forecasting competition on PM2.5 air pollution across Bangladeshi cities. Notebook-only submissions with documented reasoning filtered out unedited AutoML and LLM templates, so the rankings reflect genuine modelling work.</p>
           <dl class="nums"><div><dt>entrants</dt><dd>72</dd></div><div><dt>teams</dt><dd>26</dd></div><div><dt>submissions</dt><dd>333</dd></div></dl>
-          <p class="lnk"><a href="https://www.kaggle.com/competitions/kaggle-community-olympiad-dhaka-breath-index" target="_blank" rel="noopener">Kaggle</a></p>
+          <p class="lnk"><a href="https://www.kaggle.com/competitions/kaggle-community-olympiad-dhaka-breath-index" target="_blank" rel="noopener">Dhaka Breath Index on Kaggle</a></p>
         </div>
       </article>
 
@@ -708,7 +707,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
   function sys(){return dq.matches?'dark':'light'}
   function cur(){var c=cs.content;return c==='dark'||c==='light'?c:sys()}
   function sync(){var d=cur()==='dark';tb.setAttribute('aria-pressed',d);document.querySelectorAll('meta[name=theme-color]').forEach(function(m){m.content=d?'#141a33':'#efe6d2'})}
-  tb.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';
+  tb.addEventListener('click',function(){r.classList.add('theme-swap');requestAnimationFrame(function(){requestAnimationFrame(function(){r.classList.remove('theme-swap')})});var n=cur()==='dark'?'light':'dark';
     if(n===sys()){cs.content='light dark';try{localStorage.removeItem('theme')}catch(e){}}
     else{cs.content=n;try{localStorage.setItem('theme',n)}catch(e){}}sync()});
   addEventListener('storage',function(e){if(e.key==='theme'){cs.content=e.newValue==='light'||e.newValue==='dark'?e.newValue:'light dark';sync()}});
@@ -729,14 +728,7 @@ footer .credit{flex-basis:100%;font:400 14px/1.4 var(--sans);color:var(--ink-3)}
       (function step(){n+=2;p.textContent=txt.slice(0,n);if(n<txt.length)setTimeout(step,18);else{p.innerHTML=h;li++;setTimeout(next,li===1?260:120)}})()}
     setTimeout(next,150)}}
   window.startTerm=startTerm;
-  var tp=document.getElementById('tickp');tp.addEventListener('click',function(){var t=tp.parentNode,p=t.classList.toggle('paused');tp.textContent=p?'Play':'Pause'});
-  /* hero windows can be dragged around the desk */
-  if(still||!matchMedia('(hover:hover) and (pointer:fine) and (min-width:981px)').matches)return;
-  var z=10;document.querySelectorAll('.drag').forEach(function(w){var h=w.querySelector('.tb'),sx,sy,ox=0,oy=0;
-    h.addEventListener('pointerdown',function(e){if(e.button)return;h.setPointerCapture(e.pointerId);sx=e.clientX-ox;sy=e.clientY-oy;w.classList.add('dragging');w.style.zIndex=++z;
-      document.querySelectorAll('.desk .win').forEach(function(x){x.classList.toggle('on',x===w)})});
-    h.addEventListener('pointermove',function(e){if(!w.classList.contains('dragging'))return;ox=e.clientX-sx;oy=e.clientY-sy;w.style.translate=ox+'px '+oy+'px'});
-    function up(){w.classList.remove('dragging')}h.addEventListener('pointerup',up);h.addEventListener('pointercancel',up)});
+  var tp=document.getElementById('tickp');tp.addEventListener('click',function(){var t=tp.parentNode,p=t.classList.toggle('paused');tp.firstChild.textContent=p?'Play':'Pause'});
 })();
 </script>
 <script src="js/gsap.min.js"></script>
